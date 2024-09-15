@@ -1,0 +1,239 @@
+/* globals.css */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/** Nav-Bar **/
+
+/* Navbar Styles */
+.navbar {
+  padding: 10px 20px;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  gap: 30px; /* Increase gap between navbar items */
+}
+
+.nav-link {
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.collapse {
+  visibility: visible;
+}
+
+/* Default Contribute button styles */
+.btn-contribute {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.5rem;
+  font-size: 1rem; /* Adjust font size */
+  font-weight: 500;
+  color: #000; /* Text color */
+  border-radius: 40px; /* Rounded corners */
+  border: 1px solid black;
+  gap: 0.5rem; /* Space between text and icon */
+}
+
+/* On hover or active state */
+.btn-contribute:hover, .nav-item.active .btn-contribute {
+  background-color: #1AD1B2; /* Background color */
+  color: #fff;
+  border: none;
+}
+
+/* SVG default color */
+.btn-contribute svg path {
+  fill: #000; /* Default black */
+  transition: fill 0.3s ease; /* Smooth transition for fill color */
+}
+
+/* Icon animation on hover */
+.btn-contribute:hover svg path {
+  fill: #ffffff;
+}
+
+.nav-item.active .btn-contribute svg path{
+  fill: #ffffff;
+}
+
+.nav-item .btn-contribute img {
+  margin-left: 8px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+/* Adjust dropdown menu styles */
+.dropdown-menu {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust icons */
+.nav-item i {
+  font-size: 18px;
+  color: #000;
+}
+
+.nav-item i:hover {
+  color: #007bff;
+}
+
+/* Aligning the right-side items */
+.right-nav-items {
+  gap: 20px; /* Add more space between the right-side items */
+  margin-left: auto; /* Ensure there's a gap between the Contribute button and these items */
+}
+
+/* Ensure the right-side items stay on the right */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    justify-content: center;
+  }
+  .right-nav-items {
+    margin-left: auto; /* Push the right-side items to the far right */
+  }
+}
+
+/* Default navbar link styles */
+.nav-link {
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Hover state */
+.nav-link:hover {
+  color: #1AD1B2; /* Optional color change on hover */
+}
+
+/* Active and hover underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #1AD1B2; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+/* On hover and when active (active class should be added dynamically) */
+.nav-link:hover::after, .nav-item.active .nav-link::after {
+  width: 100%;
+}
+
+/* Optionally: Bold text when active */
+.nav-item.active .nav-link {
+  font-weight: 700;
+  color: #000; /* Active color */
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .navbar-nav .dropdown-menu {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .right-nav-items {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .right-nav-items .nav-link {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure button size is correct on mobile */
+  .btn-contribute {
+    padding: 10px 15px;
+    border-radius: 30px; /* Make it more circular on mobile */
+    margin: 0 auto; /* Center the button on mobile */
+    display: inline-flex;
+  }
+
+  /* Centering Contribute button in nav-item */
+  .nav-item {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Adjust for desktop view */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+/** Nav-Bar **/

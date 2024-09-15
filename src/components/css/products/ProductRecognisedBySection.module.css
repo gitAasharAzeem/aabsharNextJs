@@ -1,0 +1,29 @@
+.recognisedBySection {
+    padding: 3rem;
+    width: 100%;
+}
+
+.recognisedByTitle {
+    color: #3328BF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.recognisedByLogos img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 1rem;
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .recognisedByTitle {
+        font-size: 2rem;
+    }
+
+    .recognisedByLogos img {
+        max-width: 120px;
+    }
+}

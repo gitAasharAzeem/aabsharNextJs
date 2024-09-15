@@ -1,0 +1,99 @@
+.contactSection {
+    padding: 4rem;
+    border-bottom: 1px solid black;
+}
+
+.heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3328bf;
+    margin-bottom: 2rem;
+}
+
+.formControl {
+    padding: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    border: 1px solid  #D6D6D6;
+    background: #F9F9FB;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.form-check-label a {
+    color: #3328bf;
+    text-decoration: underline;
+}
+
+.submitButton {
+    background-color: #1ad1b2;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #17b39a;
+}
+
+.arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.submitButton:hover .arrow {
+    transform: translateX(5px);
+}
+
+.contactInfoCard {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #3328bf;
+    margin-bottom: 1rem;
+}
+
+.contactInfoCard h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.contactInfoCard p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .submitButton {
+        width: 100%;
+    }
+
+    .arrow {
+        display: none;
+    }
+}

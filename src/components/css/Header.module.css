@@ -1,0 +1,8 @@
+.navbarDropdown{
+    top: 77% !important;
+}
+
+.dropDownToggleAfter::after
+{
+    display: none!important;
+}

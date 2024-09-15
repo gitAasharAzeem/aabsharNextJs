@@ -1,0 +1,85 @@
+/* src/components/css/IndustryFocusSection.module.css */
+
+/* Container styling */
+.container {
+    padding: 0 50px;
+}
+
+/* Industry focus title styling */
+.industryFocusTitle {
+    color: #3328BF;
+    font-family: Poppins, sans-serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* Image card styling */
+.imageCard {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.imageCard img {
+    width: 100%;
+    height: 11.4375rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.imageText {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Save Electricity title */
+.saveElectricityTitle {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Save Electricity paragraph */
+.saveElectricityText {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Register button styling */
+.registerButton {
+    width: 16.875rem;
+    height: 3.6875rem;
+    background-color: #1AD1B2;
+    color: #fff;
+    border: none;
+    border-radius: 2.90625rem;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.registerButton:hover {
+    background-color: #17bba2;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .registerButton {
+        width: 100%;
+    }
+    .container{
+        padding: 15px;
+    }
+}

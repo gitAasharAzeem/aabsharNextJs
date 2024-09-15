@@ -1,0 +1,45 @@
+/* File: src/components/css/TrustedSection.module.css */
+.trustedSection {
+    background-color: #f5f5f5; /* Light background color */
+}
+
+.trustedTitle {
+    color: #3328BF;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.75rem; /* 240% */
+    letter-spacing: -0.03125rem;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Force custom column width for desktop to fit 7 logos in one row */
+@media (min-width: 992px) {
+    .logoContainer {
+        flex: 0 0 14.2857%; /* 7 columns with equal width (100% / 7) */
+        max-width: 14.2857%;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .trustedTitle {
+        font-size: 1.75rem;
+    }
+
+    .logo {
+        padding: 5px;
+    }
+}

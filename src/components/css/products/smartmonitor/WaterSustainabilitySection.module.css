@@ -1,0 +1,43 @@
+/* WaterSustainabilitySection.module.css */
+.waterSustainabilitySection {
+    padding: 3rem 0;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sustainabilityCard {
+    text-align: center;
+}
+
+.cardImage {
+    width: 100px;
+    height: 100px;
+    margin: 2rem auto;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.downloadBtn {
+    background-color: #1AD1B2;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+}
+
+.downloadBtn:hover {
+    opacity: 0.9;
+    border: black 1px solid;
+}

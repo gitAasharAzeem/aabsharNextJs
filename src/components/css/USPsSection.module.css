@@ -1,0 +1,189 @@
+/* USPsSection.module.css */
+.usp-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.usp-title {
+    display: flex;
+    width: 100%;
+    max-width: 44.5625rem; /* Keeps max width consistent */
+    height: auto; /* Make height auto for responsiveness */
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #3328BF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4.375rem; /* 120.69% */
+    text-transform: uppercase;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .usp-title {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .usp-title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .usp-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+
+.usp-description {
+    display: flex;
+    width: 100%;
+    max-width: 42.625rem; /* Keeps the max width on larger screens */
+    height: auto; /* Set to auto for content to define the height */
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #3328BF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem; /* 166.667% */
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .usp-description {
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .usp-description {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .usp-description {
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+    }
+}
+
+/* Video Demo Button */
+.video-demo-btn {
+    width: 14.75rem; /* Button width */
+    height: 3.6875rem; /* Button height */
+    border-radius: 2.90625rem; /* Rounded corners */
+    border: 1px solid #000; /* Black border */
+    background-color: transparent; /* Transparent background */
+    color: #000; /* Black text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover for Video Demo Button */
+.video-demo-btn:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Subscribe Now Button */
+.subscribe-btn {
+    width: 16.875rem; /* Button width */
+    height: 3.6875rem; /* Button height */
+    border-radius: 2.90625rem; /* Rounded corners */
+    background-color: #1AD1B2; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover for Subscribe Now Button */
+.subscribe-btn:hover {
+    background-color: #19bfa0; /* Slightly darker green on hover */
+    color: #fff; /* Keep white text */
+}
+
+@media (max-width: 768px) {
+    .video-demo-btn, .subscribe-btn {
+        width: 100%; /* Make buttons full width on small screens */
+        height: auto; /* Adjust height */
+    }
+}
+
+.usp-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .usp-section {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .usp-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .usp-image {
+        margin-top: 2rem;
+    }
+}
+
+/* Dot container for centering */
+.dot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the dots */
+.dot {
+    height: 10px;
+    width: 30px;
+    background-color: #808080; /* Default color: gray */
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Active dot styling */
+.dot.active {
+    background-color: #1AD1B2; /* Highlighted dot color: green */
+}
+
+@media (max-width: 768px) {
+    .dot {
+        width: 20px; /* Reduce size on smaller screens */
+    }
+}

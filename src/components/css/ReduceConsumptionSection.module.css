@@ -1,0 +1,84 @@
+/* src/components/css/ReduceConsumptionSection.module.css */
+.reduceConsumptionSection{
+    padding: 50px;
+    margin-top: 3rem;
+}
+/* Section title styling */
+.sectionTitle {
+    color: #3328BF;
+    font-family: Poppins, sans-serif;
+    font-size: 3.625rem;
+    font-weight: 500;
+    line-height: 4.375rem; /* 120.69% */
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* Links on the left side */
+.leftLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.leftLinks li {
+    margin-bottom: 1rem;
+}
+
+.leftLinks a {
+    color: #3328BF;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.leftLinks a:hover {
+    text-decoration: underline;
+}
+
+/* Feature title styling */
+.featureTitle {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.1875rem;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph styling for features */
+.feature p {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.1875rem;
+    letter-spacing: -0.025rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .featureTitle {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .reduceConsumptionSection{
+        margin-top: 0;
+    }
+    .sectionTitle{
+        font-size: 1.875rem;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+}

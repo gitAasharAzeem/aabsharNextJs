@@ -1,0 +1,73 @@
+/* SmartMonitorSection.module.css */
+
+
+.smartMonitorImage {
+    width: 100%;
+    max-width: 38.25rem;
+    height: auto;
+    z-index: 5;
+}
+
+.smartMonitorContent {
+    padding: 5rem;
+    background: #3328BF;
+    color: white;
+}
+
+.smartMonitorTitle {
+    font-size: 3.625rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.smartMonitorSubtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.smartMonitorDescription {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.smartMonitorRating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left: 20px;
+
+}
+.currency {
+    margin-left: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.subscribeBtn {
+    background-color: #1AD1B2;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 15.125rem;
+    font-size: 1.5rem;
+    height: 3.6875rem;
+}
+
+.subscribeBtn:hover {
+    background-color: #17b39a;
+}
