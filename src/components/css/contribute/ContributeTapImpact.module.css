@@ -1,0 +1,73 @@
+.tapImpactSection {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+}
+
+.tapImpactTitle {
+    color: #3328BF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+}
+
+.tapImpactSubtitle {
+    color: #3328BF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin-top: 0.5rem;
+}
+
+.tapImpactButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btnDonateTap {
+    display: flex;
+    width: 14rem;
+    height: 4.4rem;
+    padding: 0.625rem 0.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.25rem;
+    background: #3328BF;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+.btnContributeMosque {
+    display: flex;
+    width: 14.7rem;
+    height: 4.4rem;
+    padding: 0.625rem 0.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.25rem;
+    background: #1AD1B2;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+.btnDonateTap:hover,
+.btnContributeMosque:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    border: 2px solid black;
+}

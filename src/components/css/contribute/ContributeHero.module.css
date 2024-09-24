@@ -1,0 +1,74 @@
+.heroCarousel {
+    height: auto;
+    padding: 50px;
+    background-color: #FFF7DB;
+}
+
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.leadText {
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.carouselItem{
+    margin-right: auto!important;
+}
+
+.secondLine {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.authorText {
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin-top: 1rem;
+}
+
+.authorImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: auto!important;
+}
+
+.carouselControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.carouselControl {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #FFF7DB;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.carouselControlPause {
+    background-color: #FFF7DB;
+}
+.carouselControlPause i {
+    font-size: 16px;
+}

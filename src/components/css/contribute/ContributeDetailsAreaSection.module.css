@@ -1,0 +1,158 @@
+.contributeMosqueList {
+    margin: 20px auto;
+    padding: 40px;
+    background: #F1F2F2;
+    width: 100%;
+}
+
+.contributeMosqueCitySection {
+    padding: 30px;
+}
+
+.cityTitle {
+    text-align: left;
+    color: #4035C3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.5rem; /* Adjusted for better vertical alignment */
+    margin-bottom: 35px;
+}
+
+.citySubtitle {
+    text-align: left;
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin-bottom: 35px;
+}
+
+/* Updated Grid Layout */
+.contributeMosquesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 mosque cards per row */
+    gap: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.contributeMosqueCard {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    background-color: #F1F2F2;
+    transition: transform 0.2s ease;
+}
+
+.contributeMosqueCard:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Container */
+.imageContainer {
+    position: relative;
+}
+
+.mosqueImage {
+    height: 16.125rem;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.mosqueNameOverlay {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+}
+
+.mosqueDetails {
+    margin-top: 15px;
+    text-align: left;
+    overflow: hidden;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Montserrat";
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem;
+}
+
+.mosqueDetailsText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.contributeButton {
+    margin-top: 15px;
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.contributeButton:hover {
+    background-color: #00b048;
+}
+
+/* More Button */
+.contributeMoreButton {
+    display: block;
+    margin: 20px auto;
+    background-color: #4a3b8b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.contributeMoreButton:hover {
+    background-color: #372c66;
+}
+
+/* Media Queries for Responsive Behavior */
+@media (max-width: 1024px) {
+    .contributeMosquesGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 mosque cards per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .contributeMosquesGrid {
+        grid-template-columns: 1fr; /* 1 mosque card per row for smaller screens */
+    }
+
+    .mosqueImage {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+}
+
+
+@media (max-width: 992px) {
+    .contributeMosqueList{
+        padding: 5px;
+    }
+    .contributeMosqueCitySection{
+        padding: 10px;
+    }
+    .cityTitle{
+        margin-bottom: 15px;
+    }
+}

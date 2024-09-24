@@ -1,0 +1,49 @@
+.formHeading {
+    color: #888;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin: 2rem auto;
+}
+.formRow {
+    border-radius: 1.5rem;
+    padding: 50px;
+    border: 1px solid #1AD1B2;
+    background: #FFF;
+    box-shadow: 32px 32px 64px 0px rgba(52, 64, 84, 0.08);
+    margin: 3rem;
+}
+
+.formSelect {
+    width: 100%;
+    padding: 0.625rem;
+}
+
+.searchButton {
+    background-color: #1AD1B2;
+    color: #FFF;
+    padding: 0.625rem 1.25rem;
+    border-radius: 2.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+    .formRow {
+        margin: 0.5rem;
+        padding: 10px;
+    }
+    .formSelect {
+        margin-bottom: 10px;
+    }
+    .searchButton {
+        margin-top: 10px;
+    }
+}

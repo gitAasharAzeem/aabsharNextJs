@@ -196,6 +196,12 @@
     .footerBottomSection .row {
         text-align: center;
     }
+    .subscribeForm {
+        display: unset!important;
+    }
+    .subscribeInput {
+        margin-bottom: 10px!important;
+    }
 
     .bottomFooterLinks {
         justify-content: center;

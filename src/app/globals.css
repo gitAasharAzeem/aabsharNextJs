@@ -76,7 +76,7 @@ body {
 }
 
 /* On hover or active state */
-.btn-contribute:hover, .nav-item.active .btn-contribute {
+.btn-contribute:hover, .nav-item.active .btn-contribute, .btn-contribute.active {
   background-color: #1AD1B2; /* Background color */
   color: #fff;
   border: none;
@@ -89,7 +89,7 @@ body {
 }
 
 /* Icon animation on hover */
-.btn-contribute:hover svg path {
+.btn-contribute:hover svg path, .btn-contribute.active svg path {
   fill: #ffffff;
 }
 
