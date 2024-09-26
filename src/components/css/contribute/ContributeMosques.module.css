@@ -20,3 +20,216 @@
     line-height: 1.5rem;
     margin-bottom: 2rem;
 }
+.mosquesCarousel {
+overflow: hidden;
+}
+
+/* Embla Carousel Styles */
+
+.embla {
+    max-width: 70rem;
+    margin: auto;
+    position: relative;
+    --slide-height: 19rem;
+    --slide-spacing: 1rem;
+    --slide-size: 33%;
+    --slide-spacing-sm: 1.6rem;
+    --slide-size-sm: 50%;
+    --slide-spacing-lg: 2rem;
+    --slide-size-lg: calc(100% / 3);
+}
+.emblaViewport {
+    overflow: hidden;
+}
+
+.emblaContainer {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+@media (min-width: 750px) {
+    .emblaContainer {
+        margin-left: calc(var(--slide-spacing-sm) * -1);
+    }
+}
+
+@media (min-width: 1200px) {
+    .emblaContainer {
+        margin-left: calc(var(--slide-spacing-lg) * -1);
+    }
+}
+
+.emblaSlide {
+    flex: 0 0 var(--slide-size);
+    padding-left: var(--slide-spacing);
+}
+
+@media (min-width: 750px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-sm);
+        padding-left: var(--slide-spacing-sm);
+    }
+}
+
+@media (min-width: 1200px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+}
+
+.emblaSlideImg {
+    border-radius: 1.8rem;
+    display: block;
+    height: var(--slide-height);
+    width: 100%;
+    object-fit: cover;
+}
+
+.slideText {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.slideText h3 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3328BF;
+}
+
+.slideText p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+
+/* Dot buttons styling */
+.emblaDots {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+
+.carouselDotButton {
+    -webkit-tap-highlight-color: rgba(49, 49, 49, 0.5);
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 5px;
+    box-shadow: inset 0 0 0 0.2rem rgb(234, 234, 234);;
+    width: 1.6rem;
+    height: 1.6rem;
+    z-index: 1;
+    border-radius: 50%;
+    color: rgb(54, 49, 61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselDotButton:hover,
+.carouselDotButton:focus {
+    box-shadow: inset 0 0 0 2px #666; /* Hover and focus state */
+}
+
+.carouselDotButton.emblaDotSelected {
+    box-shadow: inset 0 0 0 2px #4035C3; /* Active dot color */
+}
+
+/* Navigation buttons */
+.emblaControls {
+    position: absolute;
+    top: 35%; /* Center vertically */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.emblaButton {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: inset 0 0 0 2px #d4d4d4;
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: 1;
+    border-radius: 50%;
+    color: var(--text-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s ease;
+    pointer-events: all; /* Enable pointer events on buttons */
+}
+
+/* Hover state for embla buttons */
+.emblaButton:hover {
+    box-shadow: inset 0 0 0 2px grey; /* Replaced with a variable */
+}
+
+/* SVG within embla buttons */
+.carouselButtonSvg {
+    width: 20%;
+    height: 20%;
+}
+
+/* Disabled state for navigation buttons */
+.emblaButtonDisabled {
+    color: grey; /* Replaced with a variable */
+    box-shadow: none;
+}
+
+/* Previous button style on the left */
+.carouselButtonPrev {
+    z-index: 5;
+    position: absolute;
+    left: -9rem; /* Position left */
+}
+
+/* Next button style on the right */
+.carouselButtonNext {
+    position: absolute;
+    right: -25rem; /* Position right */
+}
+
+
+@media (max-width: 992px) {
+    .embla {
+        --slide-height: 17.25rem;
+        --slide-spacing: 1rem;
+    }
+    .emblaSlide {
+        flex: none;
+    }
+    /* SVG within embla buttons */
+    .carouselButtonSvg {
+        width: 20%;
+        height: 20%;
+    }
+    /* Next button style on the right */
+    .carouselButtonNext {
+        right: -14rem; /* Position right */
+    }
+}

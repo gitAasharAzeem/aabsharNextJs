@@ -10,7 +10,9 @@ import ContributeTapImpact from '../../components/contribute/ContributeTapImpact
 import ContributeArea from "@/components/contribute/ContributeArea";
 import ContributeContributionAmount from "@/components/contribute/ContributeContributionAmount";
 
+
 const Contribute = () => {
+
     return (
         <>
             <ContributeHero />
