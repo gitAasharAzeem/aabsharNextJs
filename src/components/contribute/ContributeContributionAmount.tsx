@@ -59,22 +59,22 @@ const ContributeMosqueList: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Navigation Controls */}
-                    <div className={styles.emblaControls}>
-                        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-                    </div>
+                    {/*/!* Navigation Controls *!/*/}
+                    {/*<div className={styles.emblaControls}>*/}
+                    {/*    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />*/}
+                    {/*    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />*/}
+                    {/*</div>*/}
 
-                    {/* Dots Navigation */}
-                    <div className={styles.emblaDots}>
-                        {scrollSnaps.map((_, index) => (
-                            <DotButton
-                                key={index}
-                                onClick={() => onDotButtonClick(index)}
-                                className={`${styles.carouselDotButton} ${index === selectedIndex ? styles.emblaDotSelected : ''}`}
-                            />
-                        ))}
-                    </div>
+                    {/*/!* Dots Navigation *!/*/}
+                    {/*<div className={styles.emblaDots}>*/}
+                    {/*    {scrollSnaps.map((_, index) => (*/}
+                    {/*        <DotButton*/}
+                    {/*            key={index}*/}
+                    {/*            onClick={() => onDotButtonClick(index)}*/}
+                    {/*            className={`${styles.carouselDotButton} ${index === selectedIndex ? styles.emblaDotSelected : ''}`}*/}
+                    {/*        />*/}
+                    {/*    ))}*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </div>

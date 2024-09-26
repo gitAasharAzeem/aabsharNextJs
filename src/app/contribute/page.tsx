@@ -24,7 +24,6 @@ const Contribute = () => {
             <ContributeArea />
             <ContributeContributionAmount />
             <ContributeSize />
-
         </>
     );
 }
