@@ -21,9 +21,9 @@ const Contribute = () => {
             <ContributeTapImpact />
             <ContributeForm />
             <ContributeMosques />
-            <ContributeArea />
-            <ContributeContributionAmount />
-            <ContributeSize />
+            {/*<ContributeArea />*/}
+            {/*<ContributeContributionAmount />*/}
+            {/*<ContributeSize />*/}
         </>
     );
 }

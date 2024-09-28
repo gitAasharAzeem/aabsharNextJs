@@ -9,7 +9,7 @@
 }
 .formRow {
     border-radius: 1.5rem;
-    padding: 50px;
+    padding: 25px;
     border: 1px solid #1AD1B2;
     background: #FFF;
     box-shadow: 32px 32px 64px 0px rgba(52, 64, 84, 0.08);
@@ -29,6 +29,7 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .searchButton:hover {

@@ -63,7 +63,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
 
                     // Calculate opacity based on distance to target
                     const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
-                    const opacity = numberWithinRange(tweenValue, 0.4, 1).toString(); // Adjust range from 0.4 to 1
+                    const opacity = "1"; // Adjust range from 0.4 to 1
                     embla.slideNodes()[slideIndex].style.opacity = opacity;
                 });
             });

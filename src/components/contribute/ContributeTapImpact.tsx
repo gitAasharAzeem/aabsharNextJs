@@ -9,7 +9,7 @@ const ContributeTapImpact: React.FC = () => {
             <p className={styles.tapImpactSubtitle}>You can donate a tap and sponsor a whole mosque</p>
             <div className={styles.tapImpactButtons}>
                 <a href="#" className={`btn ${styles.btnDonateTap}`}>Donate a Tap</a>
-                <a href="#" className={`btn ${styles.btnContributeMosque}`}>Contribute to Mosque</a>
+                {/*<a href="#" className={`btn ${styles.btnContributeMosque}`}>Contribute to Mosque</a>*/}
             </div>
         </div>
     );

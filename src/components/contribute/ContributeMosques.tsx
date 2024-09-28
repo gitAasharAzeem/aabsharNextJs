@@ -52,11 +52,13 @@ const ContributeMosques: React.FC = () => {
 
     return (
         <div className={styles.mosquesSection}>
-            <h2 className={styles.mosquesHeading}>Mosques in City</h2>
-            <p className={styles.mosquesSubheading}>
-                Explore the groundbreaking projects powered by the WDK AI ToolKit, showcasing its remarkable<br/>
-                capabilities and transformative impact across diverse industries.
-            </p>
+            <div className={styles.mosquesDescription}>
+                <h2 className={styles.mosquesHeading}>Mosques in City</h2>
+                <p className={styles.mosquesSubheading}>
+                    Explore the groundbreaking projects powered by the WDK AI ToolKit, showcasing its remarkable<br/>
+                    capabilities and transformative impact across diverse industries.
+                </p>
+            </div>
             <div className={styles.mosquesCarousel}>
                 <div className={styles.embla}>
                     <div className={styles.emblaViewport} ref={emblaRef}>
@@ -65,7 +67,7 @@ const ContributeMosques: React.FC = () => {
                                 <div className={styles.emblaSlide} key={index}>
                                     <img className={styles.emblaSlideImg} src={mosque.image.featuredImage.path} alt={`Mosque ${mosque.name}`} />
                                     <div className={styles.slideText}>
-                                        <h3>{mosque.name}</h3>
+                                        <h5>{mosque.name}</h5>
                                         <p>{mosque.area}, {mosque.city}</p>
                                     </div>
                                 </div>

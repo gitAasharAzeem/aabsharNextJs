@@ -1,5 +1,6 @@
 .successStoriesContainer {
     text-align: center;
+    padding: 50px;
 }
 
 .successStoriesHeading {
@@ -8,5 +9,10 @@
     font-size: 2.5rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+    .successStoriesContainer {
+        padding: 25px;
+    }
 }

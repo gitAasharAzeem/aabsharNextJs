@@ -1,13 +1,15 @@
 .mosquesSection {
-    text-align: center;
     margin: 2rem 0;
+}
+.mosquesDescription {
+    margin: 4rem 15rem 4rem;
 }
 
 .mosquesHeading {
     color: #3328BF;
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3rem;
     margin-bottom: 1rem;
 }
@@ -21,7 +23,7 @@
     margin-bottom: 2rem;
 }
 .mosquesCarousel {
-overflow: hidden;
+    overflow: hidden;
 }
 
 /* Embla Carousel Styles */
@@ -38,6 +40,7 @@ overflow: hidden;
     --slide-spacing-lg: 2rem;
     --slide-size-lg: calc(100% / 3);
 }
+
 .emblaViewport {
     overflow: hidden;
 }
@@ -48,54 +51,27 @@ overflow: hidden;
     margin-left: calc(var(--slide-spacing) * -1);
 }
 
-@media (min-width: 750px) {
-    .emblaContainer {
-        margin-left: calc(var(--slide-spacing-sm) * -1);
-    }
-}
-
-@media (min-width: 1200px) {
-    .emblaContainer {
-        margin-left: calc(var(--slide-spacing-lg) * -1);
-    }
-}
-
 .emblaSlide {
     flex: 0 0 var(--slide-size);
     padding-left: var(--slide-spacing);
 }
 
-@media (min-width: 750px) {
-    .emblaSlide {
-        flex: 0 0 var(--slide-size-sm);
-        padding-left: var(--slide-spacing-sm);
-    }
-}
-
-@media (min-width: 1200px) {
-    .emblaSlide {
-        flex: 0 0 var(--slide-size-lg);
-        padding-left: var(--slide-spacing-lg);
-    }
-}
-
 .emblaSlideImg {
     border-radius: 1.8rem;
     display: block;
-    height: var(--slide-height);
+    height: calc(var(--slide-height) * 1.4);
     width: 100%;
     object-fit: cover;
 }
 
 .slideText {
     margin-top: 10px;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 
-.slideText h3 {
+.slideText h5 {
     margin: 5px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #3328BF;
 }
@@ -104,7 +80,6 @@ overflow: hidden;
     font-size: 1rem;
     color: #6c757d;
 }
-
 
 /* Dot buttons styling */
 .emblaDots {
@@ -191,8 +166,8 @@ overflow: hidden;
 
 /* SVG within embla buttons */
 .carouselButtonSvg {
-    width: 20%;
-    height: 20%;
+    width: 50px;
+    height: 50px;
 }
 
 /* Disabled state for navigation buttons */
@@ -211,13 +186,83 @@ overflow: hidden;
 /* Next button style on the right */
 .carouselButtonNext {
     position: absolute;
-    right: -25rem; /* Position right */
+    right: -8rem; /* Position right */
+}
+
+@media (min-width: 750px) {
+    .emblaContainer {
+        margin-left: calc(var(--slide-spacing-sm) * -1);
+    }
+}
+
+@media (min-width: 1200px) {
+    .emblaContainer {
+        margin-left: calc(var(--slide-spacing-lg) * -1);
+    }
+}
+@media (min-width: 1024px) {
+    .emblaContainer {
+        margin-left: calc(var(--slide-spacing-lg) * -1);
+    }
+}
+@media (min-width: 750px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-sm);
+        padding-left: var(--slide-spacing-sm);
+    }
+}
+
+@media (min-width: 1200px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1024px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+
+    .mosquesCarousel {
+        padding: 0 100px 0;
+    }
+
+    .mosquesDescription{
+        margin: 2rem 10rem 3rem;
+    }
+    .embla {
+        --slide-height: 15.25rem;
+        --slide-spacing: 1rem;
+    }
+
+    .carouselButtonPrev {
+        left: -5rem; /* Position right */
+    }
+
+    .carouselButtonNext {
+        right: -5rem; /* Position right */
+    }
 }
 
 
-@media (max-width: 992px) {
+@media (min-width: 427px) and (max-width: 992px) {
+    .mosquesDescription {
+        margin: 1rem;
+    }
+
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+
+    .mosquesCarousel {
+        padding: 0 100px 0;
+    }
+
     .embla {
-        --slide-height: 17.25rem;
+        --slide-height: 12.25rem;
         --slide-spacing: 1rem;
     }
     .emblaSlide {
@@ -225,11 +270,68 @@ overflow: hidden;
     }
     /* SVG within embla buttons */
     .carouselButtonSvg {
-        width: 20%;
-        height: 20%;
+        width: 40px;
+        height: 40px;
     }
-    /* Next button style on the right */
+
+    .carouselButtonPrev {
+        left: -5rem; /* Position right */
+    }
+
     .carouselButtonNext {
-        right: -14rem; /* Position right */
+        right: -5rem; /* Position right */
+    }
+
+    .mosquesDescription{
+        margin: 1rem 6rem 1rem;
+    }
+}
+@media (max-width: 426px) {
+    .mosquesDescription {
+        margin: 1rem;
+    }
+
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+
+    .mosquesCarousel {
+        padding: 0;
+    }
+
+    .embla {
+        --slide-height: 12.25rem;
+        --slide-spacing: 1rem;
+    }
+
+    .emblaSlide {
+        flex: none;
+    }
+
+
+    .carouselButtonSvg {
+        width: 40px;
+        height: 40px;
+        color: white;
+    }
+    .emblaControls {
+        top: 45%;
+    }
+
+    .carouselButtonPrev {
+        left: 0rem; /* Position right */
+    }
+
+    .carouselButtonNext {
+        right: 0rem; /* Position right */
+    }
+
+    .mosquesDescription{
+        margin: 1rem 3rem 1rem;
+    }
+
+    .slideText {
+        text-align: center;
     }
 }

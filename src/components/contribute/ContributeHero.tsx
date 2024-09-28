@@ -8,7 +8,7 @@ const ContributeHero: React.FC = () => {
             <div className={`carousel-inner ${styles.heroSection}`}>
                 <div className={`carousel-item active ${styles.carouselItem}`}>
                     <div className="container">
-                        <img src="images/author-image.png" alt="Author" className={`rounded-circle mb-3 ${styles.authorImage}`} />
+                        <img src="/images/author-image.png" alt="Author" className={`rounded-circle mb-3 ${styles.authorImage}`} />
                         <p className={styles.leadText}>
                             [All] praise is [due] to Allah, Lord of the worlds -
                             <br />
@@ -18,17 +18,17 @@ const ContributeHero: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.carouselControls}>
-                <button className={`btn btn-light ${styles.carouselControl}`} type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <i className="fas fa-chevron-left"></i>
-                </button>
-                <button id="carouselPause" type="button" className={`btn btn-light ${styles.carouselControlPause}`}>
-                    <i className="fas fa-pause"></i>
-                </button>
-                <button className={`btn btn-light ${styles.carouselControl}`} type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <i className="fas fa-chevron-right"></i>
-                </button>
-            </div>
+            {/*<div className={styles.carouselControls}>*/}
+            {/*    <button className={`btn btn-light ${styles.carouselControl}`} type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">*/}
+            {/*        <i className="fas fa-chevron-left"></i>*/}
+            {/*    </button>*/}
+            {/*    <button id="carouselPause" type="button" className={`btn btn-light ${styles.carouselControlPause}`}>*/}
+            {/*        <i className="fas fa-pause"></i>*/}
+            {/*    </button>*/}
+            {/*    <button className={`btn btn-light ${styles.carouselControl}`} type="button" data-bs-target="#heroCarousel" data-bs-slide="next">*/}
+            {/*        <i className="fas fa-chevron-right"></i>*/}
+            {/*    </button>*/}
+            {/*</div>*/}
         </div>
     );
 };
