@@ -1,5 +1,7 @@
 .blogsSection {
     padding: 0 60px;
+    border-bottom: 1px solid black;
+    overflow: hidden;
 }
 
 .blogsTitle {
@@ -43,16 +45,16 @@
 }
 
 .blogCategory {
-    background-color: #6246EA;
+    background-color: #3328BF;;
     color: white;
     padding: 5px 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 0.875rem;
 }
 
 .blogTitle {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     margin: 10px 0;
 }

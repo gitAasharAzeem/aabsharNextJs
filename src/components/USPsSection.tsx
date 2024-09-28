@@ -4,17 +4,17 @@ import styles from './css/USPsSection.module.css';
 const USPsSection = () => {
     return (
         <section className={styles['usp-section']} >
-            <div className="container px-10">
+            <div className={`container ${styles['containerDiv']}`}>
                 <div className="row">
                     {/* Text Content */}
                     <div className="col-md-7 align-items-center mt-5">
-                        <h2 className={styles['usp-title']}>DEFAULT VIDEO PLAY ON USPS</h2>
+                        <h2 className={styles['usp-title']}>Prevent Water Damage Reduce Consumption</h2>
                         <p className={styles['usp-description']}>
-                            Register your local community centers—mosques, Imam Bargahs, schools, hospitals, and more—with Aabshar.
+                            Register your local community centers—mosques,<br /> Imam Bargahs, schools, hospitals, and more—with Aabshar.
                         </p>
                         <div className={`${styles['usp-buttons']} mt-4 d-flex d-flex-inline`}>
-                            <a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>
-                            <a href="#" className={`btn ${styles['subscribe-btn']} ms-lg-3`}>Subscribe Now</a>
+                            {/*<a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>*/}
+                            <a href="https://app.aabshar.net/login" target="_blank" className={`btn ${styles['subscribe-btn']} ms-lg-3`}>Subscribe Now</a>
                         </div>
                     </div>
                     {/* Image/Illustration */}

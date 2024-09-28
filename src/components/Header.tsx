@@ -36,7 +36,7 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </a>
                 <div className="navbar-collapse collapsed collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto">
+                    <ul className={`navbar-nav mx-auto ${styles.navbarNav}`} >
                         <li className={`nav-item ${pathname === "/" ? "active" : ""}`}>
                             <a className="nav-link" href="/">
                                 Home
@@ -88,27 +88,27 @@ const Header = () => {
                                         Smart Monitor
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link className="dropdown-item" href="/products/product3">
-                                        Product 3
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="dropdown-item" href="/products/product4">
-                                        Product 4
-                                    </Link>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <Link className="dropdown-item" href="/products/product3">*/}
+                                {/*        Product 3*/}
+                                {/*    </Link>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+                                {/*    <Link className="dropdown-item" href="/products/product4">*/}
+                                {/*        Product 4*/}
+                                {/*    </Link>*/}
+                                {/*</li>*/}
                             </ul>
                         </li>
-                        <li
-                            className={`nav-item ${
-                                pathname.includes("/resources") ? "active" : ""
-                            }`}
-                        >
-                            <a className="nav-link" href="/resources">
-                                Resources
-                            </a>
-                        </li>
+                        {/*<li*/}
+                        {/*    className={`nav-item ${*/}
+                        {/*        pathname.includes("/resources") ? "active" : ""*/}
+                        {/*    }`}*/}
+                        {/*>*/}
+                        {/*    <a className="nav-link" href="/resources">*/}
+                        {/*        Resources*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                         <li className={`nav-item ${pathname === "/contact" ? "active" : ""}`}>
                             <a className="nav-link" href="/contact">
                                 Contact Us
@@ -128,21 +128,21 @@ const Header = () => {
                         </li>
                     </ul>
                     <ul className="navbar-nav right-nav-items">
+                        {/*<li className="nav-item">*/}
+                        {/*    <a className="nav-link" href="#">*/}
+                        {/*        SignUp / LogIn*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                SignUp / LogIn
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <a className="nav-link" href="/contribute">
                                 <i className="fas fa-search"></i>
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                <i className="fas fa-shopping-cart"></i>
-                            </a>
-                        </li>
+                        {/*<li className="nav-item">*/}
+                        {/*    <a className="nav-link" href="#">*/}
+                        {/*        <i className="fas fa-shopping-cart"></i>*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                     </ul>
                 </div>
             </div>

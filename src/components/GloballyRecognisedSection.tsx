@@ -7,30 +7,48 @@ export default function GloballyRecognisedSection() {
                 <div className="row">
                     <h2 className={styles.sectionTitle}>Globally Recognised:</h2>
                 </div>
-
-                <div className="row d-flex justify-content-center">
-                    <div className="col-md-4 text-center my-3">
-                        <img src="/images/uae-flag.png" alt="UAE Flag" className={`mx-auto ${styles.flagImage}`} />
-                        <h3 className={styles.locationTitle}>Abu Dhabi</h3>
-                        <p className={styles.locationDescription}>
-                            XYZ Completion won by Aabshar. Add Accomplishment and Impact you create.
-                        </p>
+                <div className="row text-center">
+                    <div className="col-md-3 text-center my-3">
+                        <img src="/images/mckinsey_logo.jpeg" alt="Fast Company" className={`mx-auto mb-3 `} />
+                        <div className={styles.details}>
+                            <h3 className={styles.locationTitle}>Fast Company</h3>
+                            <p className={styles.locationDescription}>
+                                10 Most Innovative AI Companies
+                            </p>
+                        </div>
+                        <img src="/images/uae-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />
+                    </div>
+                    <div className="col-md-3 text-center my-3">
+                        <img src="/images/mckinsey_logo.jpeg" alt="CB Insights" className={`mx-auto mb-3`} />
+                        <div className={styles.details}>
+                            <h3 className={styles.locationTitle}>CB Insights</h3>
+                            <p className={styles.locationDescription}>
+                                AI 100 List of Most Innovative Artificial Intelligence Startups
+                            </p>
+                        </div>
+                        <img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />
                     </div>
 
-                    <div className="col-md-4 text-center my-3">
+                    <div className="col-md-3 text-center my-3">
+                        <img src="/images/mckinsey_logo.jpeg" alt="Inc 5000" className={`mx-auto mb-3`} />
+                        <div className={styles.details}>
+                            <h3 className={styles.locationTitle}>Inc 5000</h3>
+                            <p className={styles.locationDescription}>
+                                WINT ranks in top 30% on the inc. 5000 list of fastest growing companies in America
+                            </p>
+                        </div>
                         <img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />
-                        <h3 className={styles.locationTitle}>U.S</h3>
-                        <p className={styles.locationDescription}>
-                            XYZ Completion won by Aabshar. Add Accomplishment and Impact you create.
-                        </p>
                     </div>
 
-                    <div className="col-md-4 text-center my-3">
+                    <div className="col-md-3 text-center my-3">
+                        <img src="/images/mckinsey_logo.jpeg" alt="Construction News" className={`mx-auto mb-3`} />
+                        <div className={styles.details}>
+                            <h3 className={styles.locationTitle}>Construction News</h3>
+                            <p className={styles.locationDescription}>
+                                Mace and WINT. Best Use of Technology
+                            </p>
+                        </div>
                         <img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />
-                        <h3 className={styles.locationTitle}>U.S</h3>
-                        <p className={styles.locationDescription}>
-                            XYZ Completion won by Aabshar. Add Accomplishment and Impact you create.
-                        </p>
                     </div>
                 </div>
             </div>

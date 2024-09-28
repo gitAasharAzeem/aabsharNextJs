@@ -1,87 +1,46 @@
-/* File: WeAreAabsharSection.module.css */
+/* Title Styling */
 .title {
-    display: flex;
-    width: 16.5rem; /* 264px */
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-bottom: 15px;
     color: #3328BF;
     font-family: 'Poppins', sans-serif;
-    font-size: 3.625rem; /* 58px */
-    font-style: normal;
+    font-size: 3.625rem;
     font-weight: 500;
-    letter-spacing: -0.0725rem;
     text-transform: uppercase;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .title {
-        width: 100%;
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
+    margin-bottom: 20px;
 }
 
 /* Description styling */
 .description {
-    display: flex;
-    width: 31.8125rem; /* 509px */
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-bottom: 15px;
-    color: #000; /* Black text */
+    color: #000;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem; /* 20px */
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: -0.025rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .description {
-        width: 100%; /* Ensure the description spans full width on mobile */
-        font-size: 1rem; /* Adjust the font size for mobile */
-        line-height: 1.8rem; /* Adjust line height for readability */
-    }
-}
 
-/* Explore More button styling */
+/*  Button */
 .exploreBtn {
-    width: 14.4375rem; /* 231px */
-    height: 3.6875rem; /* 59px */
-    flex-shrink: 0;
+    width: 16.875rem; /* Button width */
+    height: 3.6875rem; /* Button height */
     border-radius: 2.90625rem; /* Rounded corners */
-    background-color: #1AD1B2; /* Button background color */
+    background-color: #1AD1B2; /* Green background */
     color: #fff; /* White text */
+    border: none; /* No border */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem; /* Font size for the button text */
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* Hover for Subscribe Now Button */
 .exploreBtn:hover {
-    background-color: #17bfa0; /* Darker shade for hover effect */
+    background-color: #fff; /* Slightly darker green on hover */
+    color: black; /* Keep white text */
+    border: 1px solid black;
 }
-
-/* Responsive design for mobile screens */
-@media (max-width: 768px) {
-    .exploreBtn {
-        width: 100%; /* Button will take full width on mobile */
-        font-size: 1rem; /* Slightly smaller font for mobile */
-        height: 3rem; /* Slightly reduce the button height for mobile */
-    }
-}
-
 
 /* Floating product/service boxes */
 .position-relative {
@@ -91,76 +50,93 @@
 .productBox1,
 .productBox2,
 .productBox3,
-.productBox4,
-.productBoxCenter {
+.productBox4 {
     position: absolute;
-    background-color: #E0E0E0;
-    padding: 1.5rem;
+    background-color: white;
+    padding: 1rem;
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
     font-weight: 500;
+    color: #3328BF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.productImage {
+    width: 4rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Individual positions for floating product/service boxes */
 .productBox1 {
     top: 0;
-    right: 40%;
-    width: 20rem;
-}
-
-.productBoxText{
-    color: #3328BF!important;
+    right: -10px;
+    width: 12rem;
 }
 
 .productBox2 {
-    top: 40%;
-    right: 15%;
-    width: 15rem;
+    top: 45%;
+    right: 10px;
+    width: 10rem;
 }
 
 .productBox3 {
-    bottom: 35%;
-    left: 00%;
-    width: 15rem;
+    bottom: 30%;
+    left: 0;
+    width: 8rem;
 }
 
 .productBox4 {
     bottom: 0;
-    left: 30%;
-    width: 15rem;
+    left: 25%;
+    width: 10rem;
 }
 
+/* Center Aabshar Logo */
 .productBoxCenter {
-    top: 40%;
-    left: 35%;
+    position: absolute;
+    top: 30%;
+    left: 40%;
     background-color: white;
-    font-weight: bold;
-    width: 9rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.centerLogo {
+    width: 100%;
+    height: auto;
+}
+
+/* Logos styling */
 .appreciatedBy {
-    text-align: left;
     color: #3328BF;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 .appreciationLogo {
-    max-width: 100%;
+    width: 100%;
+    max-width: 120px;
     height: auto;
-    padding: 0.5rem;
-    filter: grayscale(100%); /* Make logos grayscale */
     transition: filter 0.3s ease;
 }
 
-.appreciationLogo:hover {
-    filter: grayscale(0%); /* Remove grayscale on hover */
-}
-
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .title {
         font-size: 2.5rem;
@@ -176,5 +152,10 @@
         position: static;
         margin-bottom: 1rem;
         width: 100%;
+    }
+    .exploreBtn {
+        width: 100%;
+        font-size: 1rem;
+        height: 3rem;
     }
 }

@@ -63,9 +63,9 @@
 /* Footer */
 .footerSection {
     background-color: #ffffff;
-    padding: 60px;
     text-align: left;
-    margin-top: 3rem;
+    overflow: hidden;
+    padding: 30px;
 }
 
 .footerLogo {
@@ -139,7 +139,7 @@
 
 .paymentMethodsLogos {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .paymentLogo {
@@ -184,10 +184,10 @@
 
 .footerSectionText{
     color: #3328BF!important;
-    font-family: Poppins;
+    font-family: "Poppins",sans-serif;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1.5rem; /* 150% */
 }
 

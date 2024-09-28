@@ -3,11 +3,11 @@ import styles from './css/TrustedSection.module.css';
 
 const TrustedSection = () => {
     return (
-        <section className={`container-fluid my-5 ${styles.trustedSection}`}>
+        <section className={`container-fluid pt-3 ${styles.trustedSection}`}>
             <div className="row d-flex justify-content-center">
-                <h2 className={`text-center mt-5 ${styles.trustedTitle}`}>Trusted by:</h2>
+                <h2 className={`text-center my-2 ${styles.trustedTitle}`}>Trusted by:</h2>
             </div>
-            <div className="row pb-5 justify-content-center align-items-center">
+            <div className="row justify-content-center align-items-center">
                 <div className={`col-4 col-md d-flex justify-content-center ${styles.logoContainer}`}>
                     <img src="/images/mckinsey-logo.png" alt="McKinsey & Company" className={styles.logo} />
                 </div>

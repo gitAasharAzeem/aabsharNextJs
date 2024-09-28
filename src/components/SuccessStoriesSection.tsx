@@ -10,18 +10,12 @@ const SuccessStoriesSection = () => {
                         {/* 'SUCCESS' Heading above the video */}
                         <h2 className={styles.title}>SUCCESS</h2>
                         <div className={styles.videoWrapper}>
-                            {/* Video Thumbnail */}
-                            <img
-                                src="/images/path-to-thumbnail.png"
-                                alt="Success Story Video"
-                                className={styles.videoThumbnail}
-                            />
+                            <iframe width="700" height="315" src="https://www.youtube.com/embed/fs-ti4iXU3I?si=oCwEyTtIKvIRZNQh" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
                             {/* Adding 'STORIES' text over the video */}
                             <div className={styles.overlayText}>
                                 <span className={styles.overlayStoriesText}>STORIES</span>
                             </div>
-                            {/* Play Button */}
-                            <div className={styles.playButton}></div>
                         </div>
                     </div>
 

@@ -37,8 +37,6 @@ const Footer = () => {
                             <img src="/images/logo.png" alt="Brand Logo" className={styles.footerLogo} />
                             <p>
                                 Discover a World of Possibilities with TripNavigator Tours.
-                                <br />
-                                Discover a World of Possibilities with TripNavigator Tours.
                             </p>
                         </div>
 
@@ -46,15 +44,21 @@ const Footer = () => {
                         <div className="col-md-3 mb-4">
                             <h5 className={styles.footerSectionText}>Quick Links</h5>
                             <ul className={styles.footerLinks}>
-                                <li>
-                                    <a href="#">About</a>
+                                <li className="mb-2">
+                                    <a href="/">Home</a>
                                 </li>
-                                <li>
-                                    <a href="#">Product</a>
+                                <li className="mb-2">
+                                    <a href="/successstories">Case Studies</a>
                                 </li>
-                                <li>
-                                    <a href="#">Get in Touch</a>
+                                <li className="mb-2">
+                                    <a href="/products">Products</a>
                                 </li>
+                                <li className="mb-2">
+                                    <a href="/contact">Contact Us</a>
+                                </li>
+                                {/*<li>*/}
+                                {/*    <a href="/products">Resources</a>*/}
+                                {/*</li>*/}
                             </ul>
                         </div>
 
@@ -63,10 +67,10 @@ const Footer = () => {
                             <h5 className={styles.footerSectionText}>Contact Us</h5>
                             <ul className={styles.footerContact}>
                                 <li>
-                                    <i className="fas fa-phone"></i> 0323 4409902
+                                    <i className="fas fa-phone mb-2"></i> 0323 4409902
                                 </li>
                                 <li>
-                                    <i className="fas fa-envelope"></i> www.gmail.com
+                                    <i className="fas fa-envelope"></i> info@aabshar.net
                                 </li>
                             </ul>
                         </div>
@@ -119,7 +123,7 @@ const Footer = () => {
             </footer>
 
             <footer className={styles.footerBottomSection}>
-                <div className="container">
+                <div className="container p-4">
                     <div className="row align-items-center">
                         <div className="col-md-6">
                             <p className={styles.copyrightText}>Copyright © 2024 Aabshar, All rights reserved.</p>

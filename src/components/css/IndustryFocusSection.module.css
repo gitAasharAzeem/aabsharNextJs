@@ -3,6 +3,8 @@
 /* Container styling */
 .container {
     padding: 0 50px;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 /* Industry focus title styling */
@@ -11,7 +13,7 @@
     font-family: Poppins, sans-serif;
     font-size: 1.875rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin: auto;
 }
 
 /* Image card styling */
@@ -22,36 +24,35 @@
 
 .imageCard img {
     width: 100%;
-    height: 11.4375rem;
-    border-radius: 10px;
+    height: 8.5rem;
     object-fit: cover;
 }
 
 .imageText {
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    top: 30%;
+    left: 25%;
     color: #fff;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* Save Electricity title */
 .saveElectricityTitle {
     color: #000;
-    font-family: Poppins, sans-serif;
-    font-size: 1.875rem;
-    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
 /* Save Electricity paragraph */
 .saveElectricityText {
     color: #000;
-    font-family: Poppins, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
     line-height: 2rem;
     margin-bottom: 2rem;
 }
@@ -64,7 +65,7 @@
     color: #fff;
     border: none;
     border-radius: 2.90625rem;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
     cursor: pointer;
@@ -79,6 +80,10 @@
     .registerButton {
         width: 100%;
     }
+    .container {
+        margin-top: unset!important;
+    }
+
     .container{
         padding: 15px;
     }

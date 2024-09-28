@@ -1,6 +1,7 @@
 .successStoriesSection {
     background-color: #fff4d6;
-    padding: 40px;
+    padding: 20px 40px 0;
+    overflow: hidden;
 }
 
 .title {
@@ -13,6 +14,7 @@
     left: 10%;
     /* Add spacing to align it with the video */
     position: relative;
+    max-width: 300px;
 }
 
 /* Position the "STORIES" text directly below "SUCCESS" and over the video */
@@ -34,18 +36,22 @@
 .videoWrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    background-color: #d9d9d9;
+    padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Optional: Set background color */
 }
 
-.videoThumbnail {
+.videoWrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border: 0;
 }
+
 
 /* Play Button */
 .playButton {
@@ -80,6 +86,11 @@
         width: 100%;
         font-size: 1rem;
         line-height: 1.875rem;
+        margin-top: 1rem;
+    }
+    .highlightText {
+        margin: 0.5rem 0!important;
+        height: unset!important;
     }
 }
 
@@ -93,7 +104,6 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-
     color: #000;
     font-family: 'Poppins', sans-serif;
     font-size: 1.875rem;
@@ -144,6 +154,9 @@
         font-size: 2.25rem;
     }
 
+    .successStoriesSection {
+        padding: 10px 10px 0;
+    }
     .overlayStoriesText {
         font-size: 2rem;
         top: -5px;
@@ -158,5 +171,45 @@
 
     .caseStudyLink {
         font-size: 0.9rem;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 320px) {
+    .title {
+        font-size: 2.25rem;
+        margin-bottom: 2px;
+        left: 8%;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 375px) and (min-width: 321px) {
+    .title {
+        font-size: 2.25rem;
+        margin-bottom: 2px;
+        left: 15%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 426px) and (min-width: 376px){
+    .title {
+        font-size: 2.25rem;
+        margin-bottom: 2px;
+        left: 20%;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) and (min-width: 426px){
+    .title {
+        font-size: 2.25rem;
+        margin-bottom: 2px;
+        left: 30%;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) and (min-width: 769px){
+    /* Position the "STORIES" text directly below "SUCCESS" and over the video */
+    .overlayStoriesText {
+        left: 37%;
     }
 }

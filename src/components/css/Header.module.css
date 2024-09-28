@@ -6,3 +6,7 @@
 {
     display: none!important;
 }
+
+.navbarNav{
+    gap: 15px!important;
+}
