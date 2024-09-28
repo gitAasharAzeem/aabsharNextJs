@@ -47,12 +47,12 @@ const ImpactCalculatorSection = () => {
                         <div className={styles.calculatorForm}>
                             <form className={styles.form}>
                                 <select className={`form-select ${styles.formSelect}`}>
-                                    <option selected="selected" disabled="true">Select Product</option>
+                                    <option selected disabled>Select Product</option>
                                     <option value="1">Single Mode 85% Saving</option>
                                     <option value="2">Dual Mode 98% Saving</option>
                                 </select>
                                 <select className={`form-select ${styles.formSelect}`}>
-                                    <option selected="selected" disabled="true">Select Location</option>
+                                    <option selected disabled>Select Location</option>
                                     <option value="1">Mosque</option>
                                     <option value="2">Home</option>
                                     <option value="2">Business</option>
