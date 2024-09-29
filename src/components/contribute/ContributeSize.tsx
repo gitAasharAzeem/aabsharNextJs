@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import useEmblaCarousel from 'embla-carousel-react';
-import { PrevButton, NextButton, usePrevNextButtons, onNextButtonClick } from './ContributeCarouselAreaNavigation';
+import { PrevButton, NextButton, usePrevNextButtons } from './ContributeCarouselAreaNavigation';
 import { DotButton, useDotButton } from './ContributeCarouselDots';
 import styles from '../css/contribute/ContributeArea.module.css';
 

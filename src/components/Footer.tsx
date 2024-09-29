@@ -79,13 +79,13 @@ const Footer = () => {
                         <div className="col-md-3 mb-3">
                             <h5 className={styles.footerSectionText}>Follow our socials</h5>
                             <div className={styles.footerSocial}>
-                                <a href="#">
+                                <a href="https://www.facebook.com/aabsharsolutions">
                                     <i className="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.instagram.com/aabsharsolutions/">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://x.com/i/flow/login?redirect_after_login=%2Faabsharsolution">
                                     {/* Custom SVG icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                                         <g clipPath="url(#clip0)">
@@ -101,10 +101,10 @@ const Footer = () => {
                                         </defs>
                                     </svg>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.linkedin.com/company/aabshar/">
                                     <i className="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.youtube.com/@AABSHARsolutions">
                                     <i className="fab fa-youtube"></i>
                                 </a>
                             </div>
