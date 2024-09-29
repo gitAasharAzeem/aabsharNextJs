@@ -12,7 +12,7 @@ const ProductProblemSolutionCard: React.FC<ProductProblemSolutionCardProps> = ({
     return (
         <div className={`col-md-5 ${styles.problemSolutionCard}`}>
             <div className={styles.cardHeader}>
-                <img src={icon} alt="Icon" className={styles.cardIcon} />
+                <img src={`/images/${icon}`} alt="Icon" className={styles.cardIcon} />
                 <h4 className={styles.cardTitle}>{title}</h4>
             </div>
             <p className={styles.cardDescription}>{description}</p>

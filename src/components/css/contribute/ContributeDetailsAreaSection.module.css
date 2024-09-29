@@ -134,7 +134,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
     .contributeMosquesGrid {
         grid-template-columns: 1fr; /* 1 mosque card per row for smaller screens */
     }

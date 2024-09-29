@@ -1,16 +1,17 @@
 .highlightsSection {
     background-color: #FFF7DB;
-    padding: 5rem;
+    padding: 4rem 1rem 4rem;
     color: black;
 }
 
 .highlightsTitle {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: 500;
+    text-align: left;
 }
 
 .highlightsDescription {
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .highlightStat {
@@ -20,7 +21,7 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
     .highlightsSection {
         padding: 2rem;
     }
@@ -48,3 +49,9 @@
     }
 }
 
+/* Responsive tweaks */
+@media (max-width: 991px) {
+    .highlightsSection {
+        padding: 2rem;
+    }
+}

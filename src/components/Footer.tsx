@@ -36,7 +36,7 @@ const Footer = () => {
                         <div className="col-md-3 mb-3">
                             <img src="/images/logo.png" alt="Brand Logo" className={styles.footerLogo} />
                             <p>
-                                Discover a World of Possibilities with TripNavigator Tours.
+                                Aabshar helps organizations achieve water, energy, and CO2 sustainability for ESG and SDGs compliance. Our AI monitoring systems not only detect and prevent leaks in real-time but also optimize water usage by up to 98% and significantly lowering CO2 emissions.  Join us in our mission to save 80 billion liters of water by 2028.
                             </p>
                         </div>
 
@@ -100,6 +100,12 @@ const Footer = () => {
                                             </clipPath>
                                         </defs>
                                     </svg>
+                                </a>
+                                <a href="#">
+                                    <i className="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                    <i className="fab fa-youtube"></i>
                                 </a>
                             </div>
                         </div>

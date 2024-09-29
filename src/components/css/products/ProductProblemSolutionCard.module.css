@@ -1,3 +1,4 @@
+/* Base styles */
 .problemSolutionCard {
     background-color: #FFF7DB;
     border-radius: 3.3125rem;
@@ -26,4 +27,114 @@
     font-size: 1.25rem;
     color: #000;
     margin-left: 4rem;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media only screen and (max-width: 1200px) {
+    .problemSolutionCard {
+        padding: 2rem;
+        margin: 1.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.75rem;
+    }
+
+    .cardDescription {
+        font-size: 1.125rem;
+        margin-left: 3rem;
+    }
+}
+
+/* Medium screens (tablets, smaller laptops) */
+@media only screen and (max-width: 992px) {
+    .problemSolutionCard {
+        padding: 1.75rem;
+        margin: 1.5rem;
+    }
+
+    .cardIcon {
+        width: 2.75rem;
+    }
+
+    .cardTitle {
+        font-size: 1.5rem;
+    }
+
+    .cardDescription {
+        font-size: 1rem;
+        margin-left: 2.5rem;
+    }
+}
+
+/* Small screens (large mobile phones, small tablets) */
+@media only screen and (max-width: 768px) {
+    .problemSolutionCard {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cardIcon {
+        width: 2.5rem;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.375rem;
+    }
+
+    .cardDescription {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media only screen and (max-width: 576px) {
+    .problemSolutionCard {
+        padding: 1.25rem;
+        margin: 0.75rem;
+    }
+
+    .cardIcon {
+        width: 2rem;
+    }
+
+    .cardTitle {
+        font-size: 1.25rem;
+    }
+
+    .cardDescription {
+        font-size: 0.875rem;
+        margin-left: 0;
+    }
+}
+
+/* Extra-extra small screens (very small mobile phones) */
+@media only screen and (max-width: 400px) {
+    .problemSolutionCard {
+        padding: 2rem;
+        margin: 0.5rem;
+    }
+
+    .cardIcon {
+        width: 1rem;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardDescription {
+        font-size: 0.75rem;
+        margin-left: 0;
+    }
 }

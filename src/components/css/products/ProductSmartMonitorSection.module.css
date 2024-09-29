@@ -1,5 +1,4 @@
-
-
+/* Base styles */
 .smartMonitorTitle {
     color: #000;
     font-family: 'Poppins', sans-serif;
@@ -8,6 +7,15 @@
     line-height: 4.375rem;
     text-transform: uppercase;
     margin-top: 3rem;
+}
+.smartMonitorLeft {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.container{
+    margin-top: 2rem!important;
+    padding-bottom: 1rem!important;
 }
 
 .smartMonitorText {
@@ -30,6 +38,7 @@
     padding: 0.625rem 1.25rem;
     width: 14.4375rem;
 }
+
 .getInfoBtn:hover {
     border: 1px solid black;
 }
@@ -38,5 +47,122 @@
     width: 100%;
     height: 35.8125rem;
     background: url('/images/smart-monitor.jpg') no-repeat center center / cover;
-    border-radius: 15px;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media only screen and (max-width: 1200px) {
+    .smartMonitorTitle {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .smartMonitorText {
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+    }
+
+    .smartMonitorImage {
+        height: 30rem;
+    }
+}
+
+/* Medium screens (tablets, smaller laptops) */
+@media only screen and (max-width: 992px) {
+    .smartMonitorTitle {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .smartMonitorText {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
+    .getInfoBtn {
+        width: 13rem;
+    }
+
+    .smartMonitorImage {
+        height: 25rem;
+    }
+}
+
+/* Small screens (large mobile phones, small tablets) */
+@media only screen and (max-width: 768px) {
+    .smartMonitorTitle {
+        font-size: 2.25rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+
+    .smartMonitorText {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .getInfoBtn {
+        width: 11rem;
+    }
+
+    .smartMonitorImage {
+        height: 20rem;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media only screen and (max-width: 576px) {
+    .smartMonitorLeft {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .smartMonitorTitle {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .smartMonitorText {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .getInfoBtn {
+        width: 10rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .smartMonitorImage {
+        height: 16rem;
+    }
+}
+
+/* Extra-extra small screens (very small mobile phones) */
+@media only screen and (max-width: 400px) {
+    .smartMonitorTitle {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+    }
+
+    .smartMonitorText {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .getInfoBtn {
+        width: 9rem;
+        padding: 0.5rem;
+    }
+
+    .smartMonitorImage {
+        height: 14rem;
+    }
 }

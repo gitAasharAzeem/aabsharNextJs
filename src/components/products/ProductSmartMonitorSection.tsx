@@ -2,13 +2,14 @@ import styles from '../css/products/ProductSmartMonitorSection.module.css';
 
 const ProductSmartMonitorSection = () => {
     return (
-        <section className="container mt-5">
+        <section className="container">
             <div className="row">
-                <div className="col-md-7 mt-5 ps-5">
-                    <h1 className={styles.smartMonitorTitle}>SMART MONITOR</h1>
+                <div className={`col-md-7 ${styles.smartMonitorLeft}`}>
+                    <h1 className={styles.smartMonitorTitle}>AI Monitoring System</h1>
                     <div className="w-75">
                         <p className={styles.smartMonitorText}>
-                            Register your local community centers—mosques, Imam Bargahs, schools, hospitals, and more—with Aabshar.
+                            <b>Stop, Shield & Sustainability </b><br />
+                            Let AI to detect and stop leaks at the source. It provides real-time alerts when leaks occur and can automatically shut off the water supply. Through intelligent monitoring, it identifies leak sources and waste, mitigating potential damage while reducing water consumption and cutting carbon emissions.
                         </p>
                     </div>
                     <a href="#" className={`btn ${styles.getInfoBtn}`}>Get More Info</a>

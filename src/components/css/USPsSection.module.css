@@ -135,8 +135,8 @@
 
 /* Hover for Subscribe Now Button */
 .subscribe-btn:hover {
-    background-color: #19bfa0; /* Slightly darker green on hover */
-    color: #fff; /* Keep white text */
+    color: #000000;
+    border: 1px solid black;
 }
 
 @media (max-width: 768px) {

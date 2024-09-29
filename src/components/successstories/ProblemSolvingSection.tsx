@@ -4,7 +4,7 @@ const ProblemSolvingSection = () => {
     return (
         <section className={styles.problemSolvingSection}>
             <div className="container">
-                <div className="row align-items-center my-5">
+                <div className="row align-items-center my-3">
                     <div className="col-md-4">
                         <div className={styles.videoContainer}>
                             <img src="/images/problemstandardcharterd.png" alt="Problem Image" className={styles.videoThumbnail} />

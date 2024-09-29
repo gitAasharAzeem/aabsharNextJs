@@ -37,11 +37,24 @@
 }
 /* Responsive tweaks */
 @media (max-width: 768px) {
+    .videoContainer {
+        position: relative; /* To position the play button inside the thumbnail */
+        text-align: center;
+        padding: 3rem;
+    }
+
+    .problemSolvingSection {
+      padding: unset!important;
+    }
+
     .problemSolvingTitle {
-        font-size: 1.875rem;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
     }
     .problemSolvingDescription {
-        font-size: 1rem;
+        font-size: 0.75rem;
+        text-align: center;
     }
 
     .problemSolvingSection {

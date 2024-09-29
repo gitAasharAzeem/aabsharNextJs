@@ -25,13 +25,13 @@ const USPsSection = () => {
                             className={`img-fluid ${styles['usp-image']}`}
                         />
                     </div>
-                    <div className="col-12 pt-5">
-                        <div className={styles["dot-container"]}>
-                            <span className={`${styles["dot"]} ${styles["active"]}`}></span>
-                            <span className={styles["dot"]}></span>
-                            <span className={styles["dot"]}></span>
-                        </div>
-                    </div>
+                    {/*<div className="col-12 pt-5">*/}
+                    {/*    <div className={styles["dot-container"]}>*/}
+                    {/*        <span className={`${styles["dot"]} ${styles["active"]}`}></span>*/}
+                    {/*        <span className={styles["dot"]}></span>*/}
+                    {/*        <span className={styles["dot"]}></span>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </section>

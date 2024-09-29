@@ -1,3 +1,4 @@
+/* Base styles */
 .problemSolutionSection {
     padding: 4rem;
 }
@@ -15,4 +16,90 @@
     color: #000;
     line-height: 2.5rem;
     margin-bottom: 2rem;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media only screen and (max-width: 1200px) {
+    .problemSolutionSection {
+        padding: 3rem;
+    }
+
+    .problemsHeading {
+        font-size: 3rem;
+    }
+
+    .problemsDescription {
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+    }
+}
+
+/* Medium screens (tablets, smaller laptops) */
+@media only screen and (max-width: 992px) {
+    .problemSolutionSection {
+        padding: 2.5rem;
+    }
+
+    .problemsHeading {
+        font-size: 2.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .problemsDescription {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+}
+
+/* Small screens (large mobile phones, small tablets) */
+@media only screen and (max-width: 768px) {
+    .problemSolutionSection {
+        padding: 2rem;
+    }
+
+    .problemsHeading {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .problemsDescription {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media only screen and (max-width: 576px) {
+    .problemSolutionSection {
+        padding: 1.5rem;
+    }
+
+    .problemsHeading {
+        font-size: 1.875rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .problemsDescription {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Extra-extra small screens (very small mobile phones) */
+@media only screen and (max-width: 400px) {
+    .problemSolutionSection {
+        padding: 1rem;
+    }
+
+    .problemsHeading {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .problemsDescription {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
 }
