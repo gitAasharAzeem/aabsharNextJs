@@ -68,7 +68,8 @@ const ContributeMosques: React.FC = () => {
                                     <img className={styles.emblaSlideImg} src={mosque.image.featuredImage.path} alt={`Mosque ${mosque.name}`} />
                                     <div className={styles.slideText}>
                                         <h5>{mosque.name}</h5>
-                                        <p>{mosque.area}, {mosque.city}</p>
+                                        <p>{mosque.area}</p>
+                                        <p>{mosque.city}</p>
                                     </div>
                                 </div>
                             ))}

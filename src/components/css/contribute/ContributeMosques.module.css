@@ -252,14 +252,16 @@
     .mosquesDescription {
         margin: 1rem;
     }
-
+    .slideText {
+        text-align: center;
+    }
     .emblaSlide {
         flex: 0 0 var(--slide-size-lg);
         padding-left: var(--slide-spacing-lg);
     }
 
     .mosquesCarousel {
-        padding: 0 100px 0;
+        padding: 0 10px 0;
     }
 
     .embla {
@@ -277,11 +279,11 @@
     }
 
     .carouselButtonPrev {
-        left: -5rem; /* Position right */
+        left: 0rem; /* Position right */
     }
 
     .carouselButtonNext {
-        right: -5rem; /* Position right */
+        right: 0rem; /* Position right */
     }
 
     .mosquesDescription{
@@ -298,9 +300,6 @@
         padding-left: var(--slide-spacing-lg);
     }
 
-    .mosquesCarousel {
-        padding: 0;
-    }
 
     .embla {
         --slide-height: 12.25rem;

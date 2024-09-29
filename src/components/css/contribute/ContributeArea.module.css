@@ -186,8 +186,8 @@
 
 /* SVG within embla buttons */
 .carouselButtonSvg {
-    width: 20%;
-    height: 20%;
+    width: 35px;
+    height: 35px;
 }
 
 /* Disabled state for navigation buttons */
@@ -206,6 +206,96 @@
 /* Next button style on the right */
 .carouselButtonNext {
     position: absolute;
-    right: -14rem; /* Position right */
+    right: 1rem; /* Position right */
 }
 
+@media (max-width: 426px) {
+    .emblaSlide {
+        flex: 0 0 var(--slide-size-lg);
+        padding-left: var(--slide-spacing-lg);
+    }
+
+    .embla {
+        --slide-height: 12.25rem;
+        --slide-spacing: 1rem;
+    }
+
+    .emblaSlide {
+        flex: none;
+    }
+
+
+    .carouselButtonSvg {
+        width: 30px;
+        height: 30px;
+        color: white;
+    }
+
+    .emblaControls {
+        top: 34%;
+    }
+
+    .carouselButtonPrev {
+        left: 0rem; /* Position right */
+    }
+
+    .carouselButtonNext {
+        right: 0rem; /* Position right */
+    }
+
+    .mosquesDescription{
+        margin: 1rem 3rem 1rem;
+    }
+
+    .slideText {
+        text-align: center;
+    }
+    .areaSection {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 427px) and (max-width: 992px) {
+    .emblaSlide {
+        padding-left: var(--slide-spacing);
+    }
+
+    .embla {
+        --slide-height: 12.25rem;
+        --slide-spacing: 2rem;
+    }
+
+    .emblaSlide {
+        flex: none;
+    }
+
+
+    .carouselButtonSvg {
+        width: 30px;
+        height: 30px;
+        color: white;
+    }
+
+    .emblaControls {
+        top: 32%;
+    }
+
+    .carouselButtonPrev {
+        left: 0rem; /* Position right */
+    }
+
+    .carouselButtonNext {
+        right: 0rem; /* Position right */
+    }
+
+    .mosquesDescription{
+        margin: 1rem 3rem 1rem;
+    }
+
+    .slideText {
+        text-align: center;
+    }
+    .areaSection {
+        padding: 5px;
+    }
+}
