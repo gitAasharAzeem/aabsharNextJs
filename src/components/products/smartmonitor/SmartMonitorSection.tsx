@@ -5,13 +5,13 @@ import styles from '../../css/products/smartmonitor/SmartMonitorSection.module.c
 const SmartMonitorSection = () => {
     return (
         <section>
-            <div className="container-fluid bg-white">
+            <div className="container-fluid bg-white mb-5">
                 <div className="row align-items-center bg-white">
-                    <div className="col-12 col-md-auto">
+                    <div className="col-12 col-lg-4">
                         <img src="/images/smart-monitor-2.png" alt="Smart Monitor" className={styles.smartMonitorImage} />
                     </div>
-                    <div className={`col-12 col-md ${styles.smartMonitorContent}`}>
-                        <h2 className={styles.smartMonitorTitle}>SMART MONITOR</h2>
+                    <div className={`col-12 col-lg-8 ${styles.smartMonitorContent}`}>
+                        <h2 className={styles.smartMonitorTitle}>CARBON CREDIT</h2>
                         <p className={styles.smartMonitorSubtitle}>
                             Prevent Water Damage Reduce Consumption Cut Carbon Emissions.
                         </p>

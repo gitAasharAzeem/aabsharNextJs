@@ -1,3 +1,4 @@
+/* Base styles */
 .videoTextSection {
     padding: 5rem;
     border-bottom: 1px solid black;
@@ -40,7 +41,34 @@
     text-decoration: none;
 }
 
+/* Responsive styles */
+
+/* Tablets and medium devices */
+@media (max-width: 992px) {
+    .videoTextSection {
+        padding: 4rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.0625rem;
+        line-height: 1.75rem;
+    }
+
+    .ctaLink {
+        font-size: 1.125rem;
+    }
+}
+
+/* Small tablets and large mobile phones */
 @media (max-width: 768px) {
+    .videoTextSection {
+        padding: 3rem;
+    }
+
     .sectionTitle {
         font-size: 1.5rem;
     }
@@ -51,5 +79,54 @@
 
     .ctaLink {
         font-size: 1.125rem;
+    }
+    .videoTextSection iframe{
+        height: 250px;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 576px) {
+    .videoTextSection {
+        padding: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.25rem;
+    }
+
+    .sectionDescription {
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+    }
+
+    .ctaLink {
+        font-size: 1rem;
+    }
+    .videoTextSection iframe{
+        height: 250px;
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 400px) {
+    .videoTextSection {
+        padding: 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.125rem;
+    }
+
+    .sectionDescription {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .ctaLink {
+        font-size: 0.9375rem;
+    }
+    .videoTextSection iframe{
+        height: 200px;
     }
 }

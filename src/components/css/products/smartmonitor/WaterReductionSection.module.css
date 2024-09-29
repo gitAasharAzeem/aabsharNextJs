@@ -1,4 +1,6 @@
 /* WaterReductionSection.module.css */
+
+/* Base styles */
 .waterReductionSection {
     background-image: url('/images/reduce-consumption-and-cut-water.png');
     background-size: cover;
@@ -31,4 +33,89 @@
 .sectionSubheading {
     font-size: 1.25rem;
     line-height: 1.75rem;
+}
+
+/* Responsive styles */
+
+/* Tablets and medium devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .waterReductionSection {
+        padding: 2.5rem 0;
+    }
+
+    .sectionHeading {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .subheadingContainer {
+        padding: 1.5rem;
+        bottom: -80px;
+    }
+
+    .sectionSubheading {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Small tablets and large mobile phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .waterReductionSection {
+        padding: 2rem 0;
+    }
+
+    .sectionHeading {
+        font-size: 1.75rem;
+    }
+
+    .subheadingContainer {
+        padding: 1.25rem;
+        bottom: -60px;
+    }
+
+    .sectionSubheading {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .waterReductionSection {
+        padding: 1.5rem 0;
+    }
+
+    .sectionHeading {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subheadingContainer {
+        padding: 1rem;
+        bottom: -40px;
+    }
+
+    .sectionSubheading {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Extra small mobile phones (max-width: 400px) */
+@media (max-width: 400px) {
+    .waterReductionSection {
+        padding: 1rem 0;
+    }
+
+    .sectionHeading {
+        font-size: 1.25rem;
+    }
+
+    .subheadingContainer {
+        padding: 0.75rem;
+        bottom: -30px;
+    }
+
+    .sectionSubheading {
+        font-size: 0.875rem;
+    }
 }

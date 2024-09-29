@@ -1,8 +1,10 @@
 /* HeroSection.module.css */
+
+/* Base styles */
 .heroSection {
     position: relative;
     width: 100%;
-    height: 21.625rem;;
+    height: 21.625rem;
     background-image: url('/images/productsinglebackground.png');
     background-size: cover;
     background-position: center;
@@ -12,12 +14,10 @@
 }
 
 .heroOverlay {
+    top: 30%;
     position: absolute;
-    top: 0;
-    left: 0;
     width: auto;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +40,67 @@
     font-weight: 400;
 }
 
+/* Responsive styles */
+
+/* Tablets and medium devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .heroSection {
+        height: 18rem;
+    }
+
+    .heroText h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroText p {
+        font-size: 1.125rem;
+    }
+}
+
+/* Small tablets and large mobile phones (max-width: 768px) */
 @media (max-width: 768px) {
+    .heroSection {
+        height: 16rem;
+    }
+
     .heroText h1 {
         font-size: 1.75rem;
     }
 
     .heroText p {
         font-size: 1rem;
+    }
+}
+
+/* Small mobile phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .heroSection {
+        height: 14rem;
+    }
+
+    .heroText h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroText p {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Extra small mobile phones (max-width: 400px) */
+@media (max-width: 400px) {
+    .heroOverlay {
+        top: 15%;
+    }
+    .heroSection {
+        height: 12rem;
+    }
+
+    .heroText h1 {
+        font-size: 1.25rem;
+    }
+
+    .heroText p {
+        font-size: 0.875rem;
     }
 }

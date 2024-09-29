@@ -71,7 +71,7 @@ const SearchResults = () => {
                                             />
                                         ) : (
                                             <img
-                                                src="/images/path-to-thumbnail.png"
+                                                src="/images/no-image.jpg"
                                                 alt={mosque.name}
                                                 className={styles.mosqueImage}
                                             />

@@ -1,3 +1,4 @@
+/* Base styles */
 .recognisedBySection {
     padding: 3rem;
     width: 100%;
@@ -15,15 +16,70 @@
     max-width: 150px;
     height: auto;
     margin-right: 1rem;
-    display: inline;
+    display: inline-block;
 }
 
+/* Responsive styles */
+
+/* Tablets and medium devices */
+@media (max-width: 992px) {
+    .recognisedBySection {
+        padding: 2.5rem;
+    }
+
+    .recognisedByTitle {
+        font-size: 2.25rem;
+    }
+
+    .recognisedByLogos img {
+        max-width: 130px;
+        margin-right: 0.75rem;
+    }
+}
+
+/* Small tablets and large mobile phones */
 @media (max-width: 768px) {
+    .recognisedBySection {
+        padding: 2rem;
+    }
+
     .recognisedByTitle {
         font-size: 2rem;
     }
 
     .recognisedByLogos img {
         max-width: 120px;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 576px) {
+    .recognisedBySection {
+        padding: 1.5rem;
+    }
+
+    .recognisedByTitle {
+        font-size: 1.75rem;
+    }
+
+    .recognisedByLogos img {
+        max-width: 100px;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 400px) {
+    .recognisedBySection {
+        padding: 1rem;
+    }
+
+    .recognisedByTitle {
+        font-size: 1.5rem;
+    }
+
+    .recognisedByLogos img {
+        max-width: 80px;
+        margin-right: 0.25rem;
     }
 }

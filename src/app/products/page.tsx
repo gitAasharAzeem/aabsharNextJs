@@ -14,7 +14,7 @@ const Page = () => {
             <ProductMoreProductsSection />
             <ProductProblemsSolutionsSection />
             <ProductRecognisedBySection />
-            {/*<ProductVideoTextSection />*/}
+            <ProductVideoTextSection />
         </>
     );
 };

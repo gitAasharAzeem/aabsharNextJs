@@ -1,4 +1,6 @@
 /* WaterSustainabilitySection.module.css */
+
+/* Base styles */
 .waterSustainabilitySection {
     padding: 3rem 0;
 }
@@ -40,4 +42,105 @@
 .downloadBtn:hover {
     opacity: 0.9;
     border: black 1px solid;
+}
+
+/* Responsive styles */
+
+/* Tablets and medium devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.375rem;
+    }
+
+    .cardDescription {
+        font-size: 0.9375rem;
+    }
+
+    .downloadBtn {
+        padding: 0.65rem 1.75rem;
+    }
+}
+
+/* Small tablets and large mobile phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cardImage {
+        width: 80px;
+        height: 80px;
+        margin: 1.5rem auto;
+    }
+
+    .cardTitle {
+        font-size: 1.25rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .cardDescription {
+        font-size: 0.875rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .downloadBtn {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Small mobile phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .cardImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cardTitle {
+        font-size: 1.125rem;
+    }
+
+    .cardDescription {
+        font-size: 0.8125rem;
+    }
+
+    .downloadBtn {
+        padding: 0.55rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Extra small mobile phones (max-width: 400px) */
+@media (max-width: 400px) {
+    .sectionTitle {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .cardImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardDescription {
+        font-size: 0.75rem;
+    }
+
+    .downloadBtn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
 }
