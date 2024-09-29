@@ -168,6 +168,7 @@
 .carouselButtonSvg {
     width: 50px;
     height: 50px;
+    color: black;
 }
 
 /* Disabled state for navigation buttons */
@@ -272,6 +273,7 @@
     .carouselButtonSvg {
         width: 40px;
         height: 40px;
+        color: black;
     }
 
     .carouselButtonPrev {
@@ -313,7 +315,7 @@
     .carouselButtonSvg {
         width: 40px;
         height: 40px;
-        color: white;
+        color: black;
     }
     .emblaControls {
         top: 45%;
