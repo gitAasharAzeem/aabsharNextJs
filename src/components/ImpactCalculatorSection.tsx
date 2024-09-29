@@ -1,7 +1,63 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import styles from './css/ImpactCalculatorSection.module.css';
 
 const ImpactCalculatorSection = () => {
+    const [productType, setProductType] = useState('');
+    const [waterConsumptionArea, setWaterConsumptionArea] = useState('');
+    const [numberOfTaps, setNumberOfTaps] = useState(0);
+    const [waterImpact, setWaterImpact] = useState(0);
+    const [electricitySaving, setElectricitySaving] = useState(0);
+
+    const calculateImpact = () => {
+        let waterSaving = 0;
+        let literPerMin = 0;
+        let tapRunningTime = 0;
+        let days = 0;
+        let electricitySavingFactor = 0;
+
+        // Set water saving percentage based on product type
+        if (productType === 'single_mode') {
+            waterSaving = 0.85;
+        } else if (productType === 'dual_mode') {
+            waterSaving = 0.98;
+        }
+
+        // Set values based on water consumption area
+        if (waterConsumptionArea === 'home') {
+            literPerMin = 12;
+            tapRunningTime = 5;
+            days = 30;
+            electricitySavingFactor = 0.05;
+        } else if (waterConsumptionArea === 'business') {
+            literPerMin = 14;
+            tapRunningTime = 10;
+            days = 20;
+            electricitySavingFactor = 0.3;
+        } else if (waterConsumptionArea === 'mosque') {
+            literPerMin = 15;
+            tapRunningTime = 60;
+            days = 30;
+            electricitySavingFactor = 0.1;
+        }
+
+        // Calculate before consumption, after saving, water impact, and electricity saving
+        const beforeConsumption = numberOfTaps * literPerMin * tapRunningTime * days;
+        const afterSaving = (literPerMin - (waterSaving * literPerMin)) * numberOfTaps * tapRunningTime * days;
+        const waterImpactCalc = beforeConsumption - afterSaving;
+        const electricitySavingCalc = waterImpactCalc * electricitySavingFactor;
+
+        setWaterImpact(waterImpactCalc);
+        setElectricitySaving(electricitySavingCalc);
+    };
+
+    // Trigger calculation whenever any of the input values change
+    useEffect(() => {
+        if (productType && waterConsumptionArea && numberOfTaps > 0) {
+            calculateImpact();
+        }
+    }, [productType, waterConsumptionArea, numberOfTaps]);
+
     return (
         <section className={`container-fluid ${styles.impactSection}`}>
             <div className="row">
@@ -46,23 +102,42 @@ const ImpactCalculatorSection = () => {
                         <div className={styles.greenBackground}></div>
                         <div className={styles.calculatorForm}>
                             <form className={styles.form}>
-                                <select className={`form-select ${styles.formSelect}`}>
-                                    <option selected disabled>Select Product</option>
-                                    <option value="1">Single Mode 85% Saving</option>
-                                    <option value="2">Dual Mode 98% Saving</option>
+                                <select
+                                    className={`form-select ${styles.formSelect}`}
+                                    value={productType}
+                                    onChange={(e) => setProductType(e.target.value)}
+                                >
+                                    <option value="" disabled>Select Product</option>
+                                    <option value="single_mode">Single Mode 85% Saving</option>
+                                    <option value="dual_mode">Dual Mode 98% Saving</option>
                                 </select>
-                                <select className={`form-select ${styles.formSelect}`}>
-                                    <option selected disabled>Select Location</option>
-                                    <option value="1">Mosque</option>
-                                    <option value="2">Home</option>
-                                    <option value="2">Business</option>
+                                <select
+                                    className={`form-select ${styles.formSelect}`}
+                                    value={waterConsumptionArea}
+                                    onChange={(e) => setWaterConsumptionArea(e.target.value)}
+                                >
+                                    <option value="" disabled>Select Location</option>
+                                    <option value="home">Home</option>
+                                    <option value="business">Business</option>
+                                    <option value="mosque">Mosque</option>
                                 </select>
-                                <input className={styles.formSelect} type="number" placeholder="Enter Number of Taps" />
+                                <input
+                                    className={styles.formSelect}
+                                    type="number"
+                                    placeholder="Enter Number of Taps"
+                                    value={numberOfTaps}
+                                    onChange={(e) => setNumberOfTaps(parseInt(e.target.value))}
+                                />
                                 <div className={`d-flex justify-content-center text-center ${styles.waterSaving}`}>
                                     <p className="text-center mt-4">Your Estimated Water Saving:</p>
-                                    <div className={`text-center ${styles.litersButton}`}></div>
+                                    <div className={`text-center ${styles.litersButton}`}>
+                                        {waterImpact.toLocaleString()}
+                                    </div>
                                     <p className="text-center mt-4">Liters every month</p>
                                 </div>
+                                <p className="text-center mt-4">
+                                    Estimated Electricity Saving: {electricitySaving.toFixed(2)} kWh
+                                </p>
                             </form>
                         </div>
                     </div>

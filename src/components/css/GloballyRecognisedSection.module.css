@@ -19,6 +19,14 @@
     margin-bottom: 15px;
     border-radius: 20px;
 }
+.globallyRecognisedImg {
+    width: 8rem;
+    height: auto;
+    margin-bottom: 15px;
+}
+.globallyRecognisedImgDiv {
+    height: 5rem;
+}
 
 .locationTitle {
     color: #3328BF;

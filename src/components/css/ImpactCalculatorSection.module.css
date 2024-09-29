@@ -195,10 +195,10 @@
     border-radius: 1.875rem;
     border: 1px solid #1AD1B2;
     background-color: transparent; /* Ensure it's transparent if it's not filled */
-    color: #000; /* Default text color */
+    color:#4035C3; /* Default text color */
     font-family: Poppins, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
