@@ -1,8 +1,3 @@
-.successStoriesTitleSection {
-    padding-left: 3rem;
-    padding-top: 1rem;
-}
-
 .successStoriesTitle {
     font-family: 'Poppins', sans-serif;
     font-size: 58px;
@@ -12,38 +7,23 @@
     color: #3328BF;
 }
 
-/* For devices with a maximum width of 1024px (Tablets and medium-sized screens) */
 @media (max-width: 1024px) {
     .successStoriesTitle {
         font-size: 48px;
         line-height: 60px;
     }
-
-    .successStoriesTitleSection {
-        padding: 1.5rem;
-    }
 }
 
-/* For devices with a maximum width of 768px (Small tablets and large smartphones) */
 @media (max-width: 768px) {
     .successStoriesTitle {
         font-size: 38px;
         line-height: 50px;
     }
-
-    .successStoriesTitleSection {
-        padding: 1.25rem;
-    }
 }
 
-/* For devices with a maximum width of 480px (Smartphones) */
 @media (max-width: 480px) {
     .successStoriesTitle {
         font-size: 28px;
         line-height: 40px;
-    }
-
-    .successStoriesTitleSection {
-        padding: 1rem;
     }
 }
