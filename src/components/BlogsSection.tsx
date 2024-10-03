@@ -11,7 +11,7 @@ export default function BlogsSection() {
                 {/*    </a>*/}
                 {/*</div>*/}
 
-                <div className="row mt-5">
+                <div className="row">
                     <div className="col-md-4">
                         <div className={styles.blogCard}>
                             <img src="/images/sports-blog-1.png" alt="Blog 1" className={styles.blogImage} />

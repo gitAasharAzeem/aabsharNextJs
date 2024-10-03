@@ -6,3 +6,33 @@
     font-size: 18px;
     text-align: justify;
 }
+
+@media (max-width: 1024px) {
+    .problemSolvingSection {
+        padding: 1.5rem;
+    }
+
+    .problemSolvingDescription {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .problemSolvingSection {
+        padding: 1.25rem;
+    }
+
+    .problemSolvingDescription {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .problemSolvingSection {
+        padding: 1rem;
+    }
+
+    .problemSolvingDescription {
+        font-size: 14px;
+    }
+}
