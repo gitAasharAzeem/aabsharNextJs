@@ -13,17 +13,17 @@ const HighlightsSection = () => {
                             Passionate about sustainability and driving the future of transportation.
                         </p>
                     </div>
-                    <div className="col-md-2 col-4">
+                    <div className="col-md-2 col-4 text-center">
                         <h3 className={styles.highlightStat}>$5B</h3>
-                        <p>Over $5 billion invested</p>
+                        <p className={styles.billion} >Over $5 billion <br/> invested</p>
                     </div>
-                    <div className="col-md-2 col-4">
+                    <div className="col-md-2 col-4 text-center">
                         <h3 className={styles.highlightStat}>$5B</h3>
-                        <p>Over $5 billion invested</p>
+                        <p className={styles.billion}>Over $5 billion <br/> invested</p>
                     </div>
-                    <div className="col-md-2 col-4">
+                    <div className="col-md-2 col-4 text-center">
                         <h3 className={styles.highlightStat}>$5B</h3>
-                        <p>Over $5 billion invested</p>
+                        <p className={styles.billion}>Over $5 billion <br/>invested</p>
                     </div>
                 </div>
             </div>

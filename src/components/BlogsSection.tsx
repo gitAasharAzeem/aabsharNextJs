@@ -4,12 +4,12 @@ export default function BlogsSection() {
     return (
         <section className={styles.blogsSection}>
             <div className="container">
-                <div className="d-flex justify-content-between align-items-center">
-                    <h2 className={styles.blogsTitle}>Blogs</h2>
-                    <a href="/blogs" className={styles.viewAllLink}>
-                        View All <span>→</span>
-                    </a>
-                </div>
+                {/*<div className="d-flex justify-content-between align-items-center">*/}
+                {/*    <h2 className={styles.blogsTitle}>Blogs</h2>*/}
+                {/*    <a href="/blogs" className={styles.viewAllLink}>*/}
+                {/*        View All <span>→</span>*/}
+                {/*    </a>*/}
+                {/*</div>*/}
 
                 <div className="row mt-5">
                     <div className="col-md-4">
@@ -20,10 +20,10 @@ export default function BlogsSection() {
                                 <h3 className={styles.blogTitle}>
                                     Sustainable Growth through Economic Marketing.
                                 </h3>
-                                <div className={styles.blogInfo}>
-                                    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>
-                                    <span><i className="fa fa-user"></i> Harper Evans</span>
-                                </div>
+                                {/*<div className={styles.blogInfo}>*/}
+                                {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}
+                                {/*    <span><i className="fa fa-user"></i> Harper Evans</span>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>
@@ -36,10 +36,10 @@ export default function BlogsSection() {
                                 <h3 className={styles.blogTitle}>
                                     Sustainable Growth through Economic Marketing.
                                 </h3>
-                                <div className={styles.blogInfo}>
-                                    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>
-                                    <span><i className="fa fa-user"></i> Harper Evans</span>
-                                </div>
+                                {/*<div className={styles.blogInfo}>*/}
+                                {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}
+                                {/*    <span><i className="fa fa-user"></i> Harper Evans</span>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>
@@ -52,10 +52,10 @@ export default function BlogsSection() {
                                 <h3 className={styles.blogTitle}>
                                     Sustainable Growth through Economic Marketing.
                                 </h3>
-                                <div className={styles.blogInfo}>
-                                    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>
-                                    <span><i className="fa fa-user"></i> Harper Evans</span>
-                                </div>
+                                {/*<div className={styles.blogInfo}>*/}
+                                {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}
+                                {/*    <span><i className="fa fa-user"></i> Harper Evans</span>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>

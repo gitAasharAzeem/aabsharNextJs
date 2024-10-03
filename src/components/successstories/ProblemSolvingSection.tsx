@@ -5,18 +5,9 @@ const ProblemSolvingSection = () => {
         <section className={styles.problemSolvingSection}>
             <div className="container">
                 <div className="row align-items-center my-3">
-                    <div className="col-md-4">
-                        <div className={styles.videoContainer}>
-                            <img src="/images/problemstandardcharterd.png" alt="Problem Image" className={styles.videoThumbnail} />
-                            <div className={styles.playButton}>
-                                <img src="/svg/play-icon.svg" alt="Play Button" className={styles.playIcon} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-8">
-                        <h2 className={styles.problemSolvingTitle}>We solve the Standard Chartered Problem</h2>
+                    <div className="col-12">
                         <p className={styles.problemSolvingDescription}>
-                            We’ve noticed that 59% of users in our “Gen Z” cohort used “split payments” in the last 30 days. What if we moved the split payments option earlier in the checkout flow?
+                            Water scarcity is a global issue that affects millions of people, particularly in developing countries. Aabshar is an organization that is making a real impact in tackling this issue by developing innovative solutions that are transforming lives. The innovative water saving nozzle has won international awards and keeps bringing positive change in communities that need water saving solutions. Water scarcity is a global issue that affects millions of people, particularly in developing countries. Aabshar is an organization that is making a real impact in tackling this issue by developing innovative solutions that are transforming lives. The innovative water saving nozzle has won international awards and keeps bringing positive change in communities that need water saving solutions.Water scarcity is a global issue that affects millions of people, particularly in developing countries. Aabshar is an organization that is making a real impact in tackling this issue by developing innovative solutions that are transforming lives. The innovative water saving nozzle has won international awards and keeps bringing positive change in communities that need water saving solutions.Water scarcity is a global issue that affects millions of people, particularly in developing countries. Aabshar is an organization that is making a real impact in tackling this issue by developing innovative solutions that are transforming lives. The innovative water saving nozzle has won international awards and keeps bringing positive change in communities that need water saving solutions.Water scarcity is a global issue that affects millions of people, particularly in developing countries. Aabshar is an organization that is making a real impact in tackling this issue by developing innovative solutions that are transforming lives. The innovative water saving nozzle has won international awards and keeps bringing positive change in communities that need water saving solutions.
                         </p>
                     </div>
                 </div>

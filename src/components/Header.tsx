@@ -48,7 +48,7 @@ const Header = () => {
                             }`}
                         >
                             <a className="nav-link" href="/successstories">
-                                Case Studies
+                                Success Stories
                             </a>
                         </li>
 

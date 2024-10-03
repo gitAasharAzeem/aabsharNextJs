@@ -29,10 +29,10 @@
 .blogCard {
     background: #fff;
     border-radius: 15px;
-    border: 1px solid black;
+    border: 1px solid #D6D6D6;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    color: black!important;
 }
 
 .blogImage {
@@ -46,7 +46,7 @@
 
 .blogCategory {
     background-color: #3328BF;;
-    color: white;
+    color: white!important;
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 0.875rem;

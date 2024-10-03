@@ -1,7 +1,7 @@
 .highlightsSection {
     background-color: #FFF7DB;
     padding: 4rem 1rem 4rem;
-    color: black;
+    color: black!important;
 }
 
 .highlightsTitle {
@@ -18,6 +18,10 @@
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+}
+
+.billion {
+    color: #808080!important;
 }
 
 /* Responsive tweaks */

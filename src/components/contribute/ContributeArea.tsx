@@ -37,11 +37,19 @@ const ContributeArea: React.FC = () => {
                         <div className={styles.emblaContainer}>
                             {mosques.map((mosque, index) => (
                                 <div className={styles.emblaSlide} key={index}>
-                                    <img
-                                        className={styles.emblaSlideImg}
-                                        src={mosque.image.featuredImage.path}
-                                        alt={`Mosque ${mosque.name}`}
-                                    />
+                                    {mosque?.image?.featuredImage?.path ? (
+                                        <img
+                                            src={mosque.image.featuredImage.path}
+                                            alt={mosque.name}
+                                            className={styles.emblaSlideImg}
+                                        />
+                                    ) : (
+                                        <img
+                                            src="/images/no-image.jpg"
+                                            alt={mosque.name}
+                                            className={styles.emblaSlideImg}
+                                        />
+                                    )}
                                     <div className={styles.slideText}>
                                         <h3>{mosque.name}</h3>
                                         <p>{mosque.area}, {mosque.city}</p>

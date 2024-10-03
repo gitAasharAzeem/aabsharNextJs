@@ -79,7 +79,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
                 const mosqueData = response.data.data;
 
                 // Map mosque images into the slides array
-                const mosqueSlides = mosqueData.map((mosque: any) => mosque.image.featuredImage.path);
+                const mosqueSlides = mosqueData.map((mosque: any) => mosque?.image?.featuredImage?.path);
                 setSlides(mosqueSlides);
             } catch (error) {
                 console.error("Error fetching mosque data:", error);

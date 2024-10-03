@@ -49,7 +49,19 @@ const ContributeMosqueList: React.FC = () => {
                         <div className={styles.emblaContainer}>
                             {mosques.map((mosque, index) => (
                                 <div key={mosque.id} className={styles.emblaSlide}>
-                                    <img src={mosque.image.featuredImage.path} alt={mosque.name} className={styles.mosqueImage} />
+                                    {mosque?.image?.featuredImage?.path ? (
+                                        <img
+                                            src={mosque.image.featuredImage.path}
+                                            alt={mosque.name}
+                                            className={styles.mosqueImage}
+                                        />
+                                    ) : (
+                                        <img
+                                            src="/images/no-image.jpg"
+                                            alt={mosque.name}
+                                            className={styles.mosqueImage}
+                                        />
+                                    )}
                                     <div className={styles.slideText}>
                                         <div className={styles.mosqueDetails}>
                                             <p className={styles.mosqueDetailsText}>Taps: 5 | Optimizer: 3</p>

@@ -2,6 +2,8 @@ import SuccessHeader from '../../components/successstories/SuccessHeader';
 import HighlightsSection from '../../components/successstories/HighlightsSection';
 import StandardChartedBackground from '../../components/successstories/StandardChartedBackground';
 import ProblemSolvingSection from '../../components/successstories/ProblemSolvingSection';
+import SuccessStoriesTitle from '../../components/successstories/SuccessStoriesTitle';
+import BlogsSection from '../../components/BlogsSection';
 
 export default function SuccessStoriesPage() {
     return (
@@ -10,7 +12,8 @@ export default function SuccessStoriesPage() {
             <HighlightsSection />
             <StandardChartedBackground />
             <ProblemSolvingSection />
-            <ProblemSolvingSection />
+            <SuccessStoriesTitle title="SUCCESS STORIES"/>
+            <BlogsSection />
         </>
     );
 }

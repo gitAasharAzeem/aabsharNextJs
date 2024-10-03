@@ -8,10 +8,10 @@ const USPsSection = () => {
                 <div className="row">
                     {/* Text Content */}
                     <div className="col-md-7 align-items-center mt-5">
-                        <h2 className={styles['usp-title']}>Prevent Water Damage Reduce Consumption</h2>
-                        <p className={styles['usp-description']}>
-                            Register your local community centers—mosques,<br /> Imam Bargahs, schools, hospitals, and more—with Aabshar.
-                        </p>
+                        <h3 className={styles['usp-title']}>no water damages</h3>
+                        <p className={styles['usp-description']}>Reduce Water Wastage</p>
+                        <p className={styles['usp-description']}>Reduce Electricity Bill</p>
+                        <p className={styles['usp-description']}>Reduce CO2 Emission</p>
                         <div className={`${styles['usp-buttons']} mt-4 d-flex d-flex-inline`}>
                             {/*<a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>*/}
                             <a href="https://app.aabshar.net/login" target="_blank" className={`btn ${styles['subscribe-btn']} ms-lg-3`}>Subscribe Now</a>
