@@ -1,11 +1,10 @@
-// File: src/components/TrustedSection.tsx
-import styles from './css/TrustedSection.module.css';
+import styles from '../css/products/ProductTrustedSection.module.css';
 
 const TrustedSection = () => {
     return (
         <section className={`container-fluid py-3 ${styles.trustedSection}`}>
             <div className="row px-5">
-                <h2 className={`my-2 ${styles.trustedTitle}`}>Trusted By 200+ International Brands:</h2>
+                <h2 className={`my-2 ${styles.trustedTitle}`}>Trusted by:</h2>
             </div>
             <div className="row justify-content-center align-items-center">
                 <div className={`col-4 col-md d-flex justify-content-center ${styles.logoContainer}`}>

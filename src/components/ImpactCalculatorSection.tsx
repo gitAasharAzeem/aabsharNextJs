@@ -122,7 +122,7 @@ const ImpactCalculatorSection = () => {
                                     <option value="mosque">Mosque</option>
                                 </select>
                                 <input
-                                    className={styles.formSelect}
+                                    className={styles.formInput}
                                     type="number"
                                     placeholder="Enter Number of Taps"
                                     value={numberOfTaps}

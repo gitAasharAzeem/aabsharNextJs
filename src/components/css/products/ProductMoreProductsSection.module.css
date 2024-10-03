@@ -1,6 +1,6 @@
 /* Base styles */
 .moreProductsSection {
-    padding: 4rem;
+    padding: 0 4rem;
     border-bottom: 1px solid black;
 }
 
@@ -16,7 +16,6 @@
 }
 
 .productCardImgTitle {
-    height: 550px;
     overflow: hidden;
     margin-bottom: 1.5rem;
 }
@@ -25,6 +24,7 @@
     padding: 15px;
     width: 100%;
     border-radius: 15px;
+    max-height: 380px;
 }
 
 .productTitle {
@@ -33,14 +33,22 @@
     margin-top: 2rem;
     font-weight: bold;
     text-align: center;
-    height: 85px;
 }
 
 .productDescription {
+    margin-top: 1.5rem;
     font-size: 1rem;
     color: #000;
     text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Set the number of lines you want to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5rem; /* Adjust height based on the number of lines */
+    line-height: 1.5rem; /* Adjust line height as needed */
 }
+
 
 .productBtn {
     background-color: #1AD1B2;

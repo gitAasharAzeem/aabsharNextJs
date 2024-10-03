@@ -12,9 +12,9 @@ const USPsSection = () => {
                         <p className={styles['usp-description']}>Reduce Water Wastage</p>
                         <p className={styles['usp-description']}>Reduce Electricity Bill</p>
                         <p className={styles['usp-description']}>Reduce CO2 Emission</p>
-                        <div className={`${styles['usp-buttons']} mt-4 d-flex d-flex-inline`}>
+                        <div className={`${styles['usp-buttons']} mt-4`}>
                             {/*<a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>*/}
-                            <a href="https://app.aabshar.net/login" target="_blank" className={`btn ${styles['subscribe-btn']} ms-lg-3`}>Subscribe Now</a>
+                            <a href="https://app.aabshar.net/login" target="_blank" className={`btn ${styles['subscribe-btn']}`}>Subscribe Now</a>
                         </div>
                     </div>
                     {/* Image/Illustration */}

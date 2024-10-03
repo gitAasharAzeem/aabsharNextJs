@@ -63,6 +63,9 @@
     font-weight: 600;
     text-decoration: none;
 }
+.btnBuy:hover {
+    border: 1px solid black;
+}
 
 /* Force custom column width for desktop to fit 7 logos in one row */
 @media (max-width: 992px) {
