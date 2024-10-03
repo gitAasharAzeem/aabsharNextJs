@@ -1,7 +1,7 @@
 import styles from '../css/successstories/SuccessStoriesTitle.module.css';
 
 interface SuccessStoriesTitleProps {
-    title: string;  // Explicitly define the type for title
+    title: string;
 }
 
 const SuccessStoriesTitle: React.FC<SuccessStoriesTitleProps> = ({ title }) => {
