@@ -1,6 +1,15 @@
+"use client"
 import styles from './css/Footer.module.css';
 
 const Footer = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',  // Ensures smooth scrolling
+        });
+    };
+
     return (
         <>
             {/* Footer */}
@@ -23,7 +32,7 @@ const Footer = () => {
                                 </form>
                             </div>
                             <div className="col-md-1 text-end d-none d-lg-block">
-                                <button className={styles.btnScrollUp}>
+                                <button className={styles.btnScrollUp} onClick={scrollToTop}>
                                     <i className="fas fa-chevron-up"></i>
                                 </button>
                             </div>
