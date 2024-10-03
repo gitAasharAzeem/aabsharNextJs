@@ -5,6 +5,7 @@
 .problemSolvingDescription {
     font-size: 18px;
     text-align: justify;
+    color: black!important;
 }
 
 @media (max-width: 1024px) {
