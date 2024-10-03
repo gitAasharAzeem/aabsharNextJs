@@ -2,6 +2,7 @@
 .reviewsSection {
     background-color: #FFF7DB;
     padding: 3rem 0;
+    color: black!important;
 }
 
 .reviewsHeader {
@@ -12,7 +13,7 @@
 .reviewsTitle {
     font-size: 2rem;
     font-weight: 600;
-    color: #3328BF;
+    color: #3328BF!important;
 }
 
 .reviewsSubtitle {
@@ -21,6 +22,7 @@
 }
 
 .reviewCard {
+    color: black!important;
     text-align: center;
     background-color: #FFF7DB;
     border-radius: 2rem;

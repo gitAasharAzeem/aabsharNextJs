@@ -3,7 +3,7 @@
 /* Base styles */
 .smartMonitorImage {
     position: absolute;
-    top: 31%;
+    top: 13rem;
     width: 100%;
     max-width: 30rem;
     height: auto;
@@ -78,7 +78,7 @@
     /* Base styles */
     .smartMonitorImage {
         position: absolute;
-        top: 27%;
+        top: 10rem;
         left: 4rem;
         width: 100%;
         max-width: 30rem;
@@ -92,7 +92,7 @@
     /* Base styles */
     .smartMonitorImage {
         position: absolute;
-        top: 18%;
+        top: 7rem;
         left: 10rem;
         width: 100%;
         max-width: 30rem;
