@@ -36,9 +36,9 @@ const WaterSustainabilitySection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-center">
-                    <a href="#" className={`btn ${styles.downloadBtn}`}>Download Product Brochure</a>
-                </div>
+                {/*<div className="text-center">*/}
+                {/*    <a href="#" className={`btn ${styles.downloadBtn}`}>Download Product Brochure</a>*/}
+                {/*</div>*/}
             </div>
         </section>
     );
