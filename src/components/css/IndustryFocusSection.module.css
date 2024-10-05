@@ -17,21 +17,37 @@
 }
 
 /* Image card styling */
-.imageCard {
+.imageCard, .imageCardTextile {
     position: relative;
     margin-bottom: 1rem;
 }
 
 .imageCard img {
-    width: 100%;
-    height: 8.5rem;
+    width: 10rem;
+    height: 10rem;
     object-fit: cover;
 }
 
-.imageText {
+.imageCardTextile img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.imageText{
     position: absolute;
-    top: 30%;
-    left: 25%;
+    top: 35%;
+    left: 20%;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.imageCardTextile .imageText{
+    position: absolute;
+    top: 35%;
+    left: 35%;
     color: #fff;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
@@ -77,6 +93,11 @@
 
 /* Responsive styling */
 @media (max-width: 768px) {
+    .imageCard img {
+        width: 100%;
+        height: 8rem;
+        object-fit: cover;
+    }
     .registerButton {
         width: 100%;
     }

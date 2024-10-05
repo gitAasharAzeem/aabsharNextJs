@@ -5,10 +5,10 @@ const WeAreAabsharSection = () => {
         <section className="container p-5">
             <div className="row">
                 {/* Left side with title, description, and button */}
-                <div className="col-md-6">
-                    <h2 className={styles.title}>We Are Aabshar</h2>
+                <div className="col-lg-6">
+                    <h2 className={styles.title}>One Stop   Solutions</h2>
                     <p className={styles.description}>
-                        At Aabshar, we understand that water is a precious and finite resource that must be conserved for future generations. That’s why we have made it our mission to provide innovative solutions that help individuals and businesses save water.
+                        To improve your water & CO2 footprint, you need to know how and where it’s used. Our AI monitoring solutions collects detailed water flow and usage information to help you achieve ESG & SDGs compliance effectively. The Enterprise Grade system.
                     </p>
                     <a href="/products" target="_blank" className={`btn ${styles.exploreBtn} ms-lg-3`}>Explore More!</a>
 
@@ -31,24 +31,23 @@ const WeAreAabsharSection = () => {
                 </div>
 
                 {/* Right side with floating product/service boxes */}
-                <div className="col-md-6 position-relative">
+                <div className="col-lg-6 col-12 position-relative">
                     <div className={styles.productBox1}>
-                        <img src="/images/path-to-ai-monitoring-system.png" alt="AI Monitoring System" className={styles.productImage} />
+                        <img src="/images/aibox.png" alt="AI Monitoring System" className={styles.productImage} />
                         <a href="/" className={styles.productBoxText}>AI Monitoring System →</a>
                     </div>
                     <div className={styles.productBox2}>
-                        <img src="/images//path-to-carbon-credit.png" alt="Carbon Credit" className={styles.productImage} />
+                        <img src="/images/co2Box.png" alt="Carbon Credit" className={styles.productImage} />
                         <a href="/" className={styles.productBoxText}>Carbon Credit →</a>
                     </div>
                     <div className={styles.productBox3}>
-                        <img src="/images//path-to-aerator.png" alt="Aerator" className={styles.productImage} />
-                        <a href="/" className={styles.productBoxText}>Aerator →</a>
+                        <img src="/images/path-to-aerator.png" alt="Water Nozzle" className={styles.productImage} />
+                        <a href="/" className={styles.productBoxText3}>Accessories →</a>
                     </div>
                     <div className={styles.productBox4}>
-                        <img src="/images//path-to-water-nozzle.png" alt="Water Nozzle" className={styles.productImage} />
-                        <a href="/" className={styles.productBoxText}>Water Nozzle →</a>
+                        <img src="/images/path-to-carbon-credit.png" alt="Aerator" className={styles.productImage} />
+                        <a href="/" className={styles.productBoxText4}>Water Nozzle →</a>
                     </div>
-
                     {/* Center Aabshar Logo */}
                     <div className={styles.productBoxCenter}>
                         <img src="/images/logo.png" alt="Aabshar Logo" className={styles.centerLogo} />

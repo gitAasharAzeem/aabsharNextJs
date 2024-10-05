@@ -9,7 +9,7 @@ const SuccessStoriesTitle: React.FC<SuccessStoriesTitleProps> = ({ title }) => {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className={styles.successStoriesTitleSection}>
+                    <div>
                         <div className={styles.successStoriesTitle}>
                             {title}
                         </div>

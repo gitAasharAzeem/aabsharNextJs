@@ -25,7 +25,7 @@
     margin-bottom: 15px;
 }
 .globallyRecognisedImgDiv {
-    height: 5rem;
+    height: 3rem;
 }
 
 .locationTitle {
@@ -47,7 +47,6 @@
 
 .details {
     margin-top: 25px;
-    height: 150px;
 }
 
 @media (max-width: 768px) {

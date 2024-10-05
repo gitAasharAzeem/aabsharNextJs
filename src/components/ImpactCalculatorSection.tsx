@@ -90,9 +90,9 @@ const ImpactCalculatorSection = () => {
                             </div>
                         </div>
                     </div>
-                    <button className={`btn btn-outline-primary ${styles.downloadButton}`}>
-                        Download Brochure
-                    </button>
+                    {/*<button className={`btn btn-outline-primary ${styles.downloadButton}`}>*/}
+                    {/*    Download Brochure*/}
+                    {/*</button>*/}
                 </div>
 
                 {/* Monthly Impact Calculator */}
@@ -135,9 +135,9 @@ const ImpactCalculatorSection = () => {
                                     </div>
                                     <p className="text-center mt-4">Liters every month</p>
                                 </div>
-                                <p className="text-center mt-4">
-                                    Estimated Electricity Saving: {electricitySaving.toFixed(2)} kWh
-                                </p>
+                                {/*<p className="text-center mt-4">*/}
+                                {/*    Estimated Electricity Saving: {electricitySaving.toFixed(2)} kWh*/}
+                                {/*</p>*/}
                             </form>
                         </div>
                     </div>

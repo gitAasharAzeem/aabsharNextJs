@@ -8,6 +8,7 @@ import ReduceConsumptionSection from '../components/ReduceConsumptionSection';
 import IndustryFocusSection from '../components/IndustryFocusSection';
 import GloballyRecognisedSection from '../components/GloballyRecognisedSection';
 import BlogsSection from '../components/BlogsSection';
+import BlogSectionHeading from "../components/BlogSectionHeading";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             <ReduceConsumptionSection />
             <IndustryFocusSection />
             <GloballyRecognisedSection />
+            <BlogSectionHeading />
             <BlogsSection />
         </main>
       </>

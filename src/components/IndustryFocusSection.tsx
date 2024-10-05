@@ -9,19 +9,19 @@ const IndustryFocusSection = () => {
                 {/* Left section: Industry Focus images */}
                 <div className="col-md-8 col-sm-12">
                     <div className="row">
-                        <div className="col-md-3 col-12 my-auto">
+                        <div className="col-lg-3 col-md-6 col-12 my-auto">
                             <div>
                                 <h2 className={styles.industryFocusTitle}>Industry Focus:</h2>
                             </div>
                         </div>
-                        <div className="col-md-3 col-12">
+                        <div className="col-lg-3 col-md-6 col-12">
                             <div className={styles.imageCard}>
                                 <img src="/images/religious-center.png" alt="Religious Centers" />
                                 <div className={styles.imageText}>Religious Centers</div>
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            <div className={`${styles.imageCard} ${styles.imageCardTextile}`}>
+                        <div className="col-md-6">
+                            <div className={`${styles.imageCardTextile}`}>
                                 <img src="/images/textile.png" alt="Textile" />
                                 <div className={styles.imageText}>Textile</div>
                             </div>
@@ -29,13 +29,13 @@ const IndustryFocusSection = () => {
                     </div>
 
                     <div className="row mt-4">
-                        <div className="col-md-3 col-sm-6">
+                        <div className="col-lg-3 col-md-6">
                             <div className={styles.imageCard}>
                                 <img src="/images/hospital.png" alt="Hospital" />
                                 <div className={styles.imageText}>Hospital</div>
                             </div>
                         </div>
-                        <div className="col-md-3 col-sm-6">
+                        <div className="col-lg-3 col-md-6">
                             <div className={styles.imageCard}>
                                 <img src="/images/hospitality.png" alt="Hospitality" />
                                 <div className={styles.imageText}>Hospitality</div>
