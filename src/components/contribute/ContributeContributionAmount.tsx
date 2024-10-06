@@ -19,7 +19,7 @@ interface Mosque {
 const ContributeMosqueList: React.FC = () => {
     const [mosques, setMosques] = useState<Mosque[]>([]);
     const [loading, setLoading] = useState(true); // Loading state
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }); // Embla carousel setup
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }); // Set loop to true to enable infinite looping
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
 
@@ -44,13 +44,17 @@ const ContributeMosqueList: React.FC = () => {
     // Automatically click the "Next" button every 2 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            if (emblaApi && !nextBtnDisabled) {
-                onNextButtonClick();
+            if (emblaApi) {
+                if (emblaApi.canScrollNext()) {
+                    onNextButtonClick(); // Move to the next slide
+                } else {
+                    emblaApi.scrollTo(0); // Restart from the beginning
+                }
             }
         }, 2000); // Change slide every 2 seconds
 
         return () => clearInterval(interval); // Clear interval on component unmount
-    }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
+    }, [emblaApi, onNextButtonClick]);
 
     if (loading) {
         return <LoadingSkeleton />; // Show loading skeleton while data is being fetched
@@ -61,7 +65,7 @@ const ContributeMosqueList: React.FC = () => {
             <div className={styles.contributeMosqueList}>
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className={styles.contributionHeading}>CONTRIBUTION</h2>
-                    <a href="/contribute/detailsbycontribution" >View All</a>
+                    <a href="/contribute/detailsbycontribution" className={styles.contributionViewAll}>View All</a>
                 </div>
                 {/* Embla Carousel */}
                 <div className={styles.embla}>

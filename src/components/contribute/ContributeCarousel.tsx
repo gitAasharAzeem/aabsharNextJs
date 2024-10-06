@@ -156,13 +156,13 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
                 </div>
             </div>
 
-            {/* Navigation Controls */}
-            <div>
-                <div className={styles.emblaControls}>
-                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-                </div>
-            </div>
+            {/*/!* Navigation Controls *!/*/}
+            {/*<div>*/}
+            {/*    <div className={styles.emblaControls}>*/}
+            {/*        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />*/}
+            {/*        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />*/}
+            {/*    </div>*/}
+            {/*</div>*/}
         </div>
     );
 };
