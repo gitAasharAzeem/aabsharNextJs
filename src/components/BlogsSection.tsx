@@ -14,11 +14,11 @@ export default function BlogsSection() {
                 <div className="row">
                     <div className="col-md-4">
                         <div className={styles.blogCard}>
-                            <img src="/images/sports-blog-1.png" alt="Blog 1" className={styles.blogImage} />
+                            <img src="/images/techstars.png" alt="Blog 1" className={styles.blogImage} />
                             <div className={styles.blogContent}>
-                                <span className={styles.blogCategory}>Standard Chartered</span>
+                                <span className={styles.blogCategory}>High-growth Companies</span>
                                 <h3 className={styles.blogTitle}>
-                                    Sustainable Growth through Economic Marketing.
+                                    Techstars WaterTech.
                                 </h3>
                                 {/*<div className={styles.blogInfo}>*/}
                                 {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}
@@ -30,11 +30,11 @@ export default function BlogsSection() {
 
                     <div className="col-md-4">
                         <div className={styles.blogCard}>
-                            <img src="/images/sports-blog-2.png" alt="Blog 2" className={styles.blogImage} />
+                            <img src="/images/savepak.png" alt="Blog 2" className={styles.blogImage} />
                             <div className={styles.blogContent}>
-                                <span className={styles.blogCategory}>Title Name</span>
+                                <span className={styles.blogCategory}>Save Pakistan</span>
                                 <h3 className={styles.blogTitle}>
-                                    Sustainable Growth through Economic Marketing.
+                                    USAID Pakistan.
                                 </h3>
                                 {/*<div className={styles.blogInfo}>*/}
                                 {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}
@@ -46,11 +46,11 @@ export default function BlogsSection() {
 
                     <div className="col-md-4">
                         <div className={styles.blogCard}>
-                            <img src="/images/sports-blog-2.png" alt="Blog 3" className={styles.blogImage} />
+                            <img src="/images/awards.png" alt="Blog 3" className={styles.blogImage} />
                             <div className={styles.blogContent}>
-                                <span className={styles.blogCategory}>Marketing</span>
+                                <span className={styles.blogCategory}>Award Winning Tech </span>
                                 <h3 className={styles.blogTitle}>
-                                    Sustainable Growth through Economic Marketing.
+                                    Accredited by Over 50 Orgs
                                 </h3>
                                 {/*<div className={styles.blogInfo}>*/}
                                 {/*    <span><i className="fa fa-clock-four"></i> August 17, 2023</span>*/}

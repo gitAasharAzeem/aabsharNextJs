@@ -6,7 +6,7 @@ export default function BlogSectionHeading() {
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center">
                     <h2 className={styles.blogsTitle}>BLOGS</h2>
-                    <a href="/blogs" className={styles.viewAllLink}>
+                    <a href="https://medium.com/@aabsharsolutions" target="_blank" className={styles.viewAllLink}>
                         View All <span>→</span>
                     </a>
                 </div>
