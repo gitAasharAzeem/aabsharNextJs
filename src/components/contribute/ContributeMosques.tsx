@@ -5,9 +5,12 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { PrevButton, NextButton, usePrevNextButtons } from './ContributeCarouselMosqueNavigation';
 import { DotButton, useDotButton } from './ContributeCarouselDots';
 import styles from '../css/contribute/ContributeMosques.module.css';
+import LoadingSkeleton from "@/components/LoadingSkeleton"; // Assuming you have this component
 
 const ContributeMosques: React.FC = () => {
-    const [mosques, setMosques] = useState<any[]>([]); // State to hold mosque data
+    const [mosques, setMosques] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true); // Loading state for the data
+
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
@@ -43,12 +46,29 @@ const ContributeMosques: React.FC = () => {
                 }
 
                 setMosques(roundRobinSortedMosques);
+                setLoading(false); // Data is loaded, stop loading spinner
             } catch (error) {
                 console.error("Error fetching mosques:", error);
+                setLoading(false); // Stop loading even on error
             }
         };
         fetchMosques();
     }, []);
+
+    // Automatically click the "Next" button every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (emblaApi && !nextBtnDisabled) {
+                onNextButtonClick();
+            }
+        }, 2000); // Change slide every 2 seconds
+
+        return () => clearInterval(interval); // Clear interval on component unmount
+    }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
+
+    if (loading) {
+        return <LoadingSkeleton />; // Show loading spinner while data is being fetched
+    }
 
     return (
         <div className={styles.mosquesSection}>
@@ -92,16 +112,6 @@ const ContributeMosques: React.FC = () => {
                         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
                     </div>
-                    {/* Dots for Navigation */}
-                    {/*<div className={styles.emblaDots}>*/}
-                    {/*    {scrollSnaps.map((_, index) => (*/}
-                    {/*        <DotButton*/}
-                    {/*            key={index}*/}
-                    {/*            onClick={() => onDotButtonClick(index)}*/}
-                    {/*            className={`${styles.carouselDotButton} ${index === selectedIndex ? styles.emblaDotSelected : ''}`}*/}
-                    {/*        />*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
                 </div>
             </div>
         </div>

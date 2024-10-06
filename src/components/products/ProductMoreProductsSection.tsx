@@ -28,7 +28,12 @@ const ProductMoreProductsSection = () => {
                                     <h3 className={styles.productTitle}>{product.title}</h3>
                                     <p className={styles.productDescription}>{product.description}</p>
                                 </div>
-                                <a href={`${product.link}${product.title}`} className={`btn ${styles.productBtn}`}>{product.button}</a>
+                                <a
+                                    href={product.link === '/contact' ? product.link : `${product.link}${product.title}`}
+                                    className={`btn ${styles.productBtn}`}
+                                >
+                                    {product.button}
+                                </a>
                             </div>
                         </div>
                     ))}

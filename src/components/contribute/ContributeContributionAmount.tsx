@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { PrevButton, NextButton, usePrevNextButtons } from './ContributeCarouselMosqueNavigation';
 import { DotButton, useDotButton } from './ContributeCarouselDots';
 import styles from "../css/contribute/ContributeContributionAmount.module.css";
+import LoadingSkeleton from "@/components/LoadingSkeleton"; // Import your loading skeleton
 
 interface Mosque {
     id: string;
@@ -17,10 +18,12 @@ interface Mosque {
 
 const ContributeMosqueList: React.FC = () => {
     const [mosques, setMosques] = useState<Mosque[]>([]);
+    const [loading, setLoading] = useState(true); // Loading state
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }); // Embla carousel setup
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
 
+    // Fetch mosque data from API
     useEffect(() => {
         const fetchMosques = async () => {
             try {
@@ -28,13 +31,30 @@ const ContributeMosqueList: React.FC = () => {
                 const mosqueData: Mosque[] = response.data.data;
 
                 // We only want 3 mosques, so slice the data to only include 3
-                setMosques(mosqueData);
+                setMosques(mosqueData); // Slice to 3 mosques
+                setLoading(false); // Set loading false once data is fetched
             } catch (error) {
                 console.error("Error fetching mosque data:", error);
+                setLoading(false); // Set loading false in case of error
             }
         };
         fetchMosques();
     }, []);
+
+    // Automatically click the "Next" button every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (emblaApi && !nextBtnDisabled) {
+                onNextButtonClick();
+            }
+        }, 2000); // Change slide every 2 seconds
+
+        return () => clearInterval(interval); // Clear interval on component unmount
+    }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
+
+    if (loading) {
+        return <LoadingSkeleton />; // Show loading skeleton while data is being fetched
+    }
 
     return (
         <div className="container">
@@ -81,12 +101,6 @@ const ContributeMosqueList: React.FC = () => {
                             ))}
                         </div>
                     </div>
-
-                    {/*/!* Navigation Controls *!/*/}
-                    {/*<div className={styles.emblaControls}>*/}
-                    {/*    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />*/}
-                    {/*    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />*/}
-                    {/*</div>*/}
 
                     {/* Dots Navigation */}
                     <div className={styles.emblaDots}>

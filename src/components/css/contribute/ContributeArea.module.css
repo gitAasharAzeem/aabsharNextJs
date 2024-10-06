@@ -33,7 +33,7 @@
     max-width: 90vw;
     overflow: hidden;
     margin: auto;
-    --slide-height: 19rem;
+    --slide-height: 15rem;
     --slide-spacing: 1rem;
     --slide-size: 27%;
     position: relative;

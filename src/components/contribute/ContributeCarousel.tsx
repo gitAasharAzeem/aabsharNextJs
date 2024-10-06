@@ -7,7 +7,6 @@ import { DotButton, useDotButton } from "./ContributeCarouselDots";
 import axios from "axios";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 
-// Loading spinner or skeleton component
 
 
 const TWEEN_FACTOR_BASE = 0.84;
@@ -136,7 +135,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
             if (emblaApi && !nextBtnDisabled) {
                 onNextButtonClick();
             }
-        }, 2000);
+        }, 2200);
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [emblaApi, nextBtnDisabled, onNextButtonClick]);

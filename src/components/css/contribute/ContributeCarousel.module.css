@@ -3,9 +3,9 @@
     max-width: 100%;
     overflow: hidden;
     margin: auto;
-    --slide-height: 20.25rem;
+    --slide-height: 22.25rem;
     --slide-spacing: 0.5rem;
-    --slide-size: 55%;
+    --slide-size: 50%;
     position: relative; /* Ensure buttons are positioned relative to the embla */
 }
 

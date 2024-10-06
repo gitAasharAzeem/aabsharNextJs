@@ -75,7 +75,7 @@
 
 .footerSection p,
 .footerSection a {
-    color: #6c757d;
+    color: black;
 }
 
 .footerSection h5 {
@@ -87,6 +87,7 @@
 .footerContact ul {
     list-style: none;
     padding: 0;
+    color: black!important;
 }
 
 .footerLinks ul li,
@@ -95,7 +96,7 @@
 }
 
 .footerLinks ul li a {
-    color: #6c757d;
+    color: black!important;
     text-decoration: none;
 }
 
