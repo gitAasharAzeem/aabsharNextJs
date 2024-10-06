@@ -1,0 +1,26 @@
+/* components/LoadingSkeleton.module.css */
+.skeletonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem;
+}
+
+.skeleton {
+    height: 200px;
+    background-color: #f3f0f0;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f0f0f0;
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
+}

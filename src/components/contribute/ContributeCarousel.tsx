@@ -5,6 +5,10 @@ import styles from "../css/contribute/ContributeCarousel.module.css";
 import { PrevButton, NextButton, usePrevNextButtons } from "./ContributeCarouselNavigation";
 import { DotButton, useDotButton } from "./ContributeCarouselDots";
 import axios from "axios";
+import LoadingSkeleton from "@/components/LoadingSkeleton";
+
+// Loading spinner or skeleton component
+
 
 const TWEEN_FACTOR_BASE = 0.84;
 
@@ -21,6 +25,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
     const tweenFactor = useRef(0);
 
     const [slides, setSlides] = useState<string[]>([]); // State to hold the slides (image URLs)
+    const [loading, setLoading] = useState(true); // Manage loading state
 
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
         usePrevNextButtons(emblaApi);
@@ -61,10 +66,13 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
                         });
                     }
 
-                    // Calculate opacity based on distance to target
+                    // Calculate opacity and scale based on distance to target
                     const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
-                    const opacity = "1"; // Adjust range from 0.4 to 1
-                    embla.slideNodes()[slideIndex].style.opacity = opacity;
+                    const opacity = numberWithinRange(tweenValue, 1, 1); // Adjust opacity from 0.4 to 1
+                    const scale = numberWithinRange(tweenValue, 0.50, 1); // Adjust scale from 0.95 to 1
+
+                    embla.slideNodes()[slideIndex].style.transform = `scale(${scale})`;
+                    embla.slideNodes()[slideIndex].style.opacity = opacity.toString();
                 });
             });
         },
@@ -81,25 +89,27 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
                 // Map mosque images into the slides array
                 const mosqueSlides = mosqueData.map((mosque: any) => mosque?.image?.featuredImage?.path);
                 setSlides(mosqueSlides);
+                setLoading(false);
             } catch (error) {
                 console.error("Error fetching mosque data:", error);
+                setLoading(false); // Handle error state
             }
         };
 
         fetchMosques();
     }, []);
 
-    // Initialize Embla when the component mounts
+    // Initialize Embla when the component mounts and only after loading is complete
     useEffect(() => {
-        if (emblaRef.current && !emblaApi) {
-            // Setting options for the EmblaCarousel
+        if (emblaRef.current && !emblaApi && !loading) {
             const embla = EmblaCarousel(emblaRef.current, {
-                loop: true, // Enable infinite loop
-                align: 'center', // Center align slides in the viewport
-                slidesToScroll: 1, // Scroll one slide at a time
-                skipSnaps: false, // Do not skip scroll snaps
-                containScroll: 'trimSnaps', // Contain scroll within the snaps
-                ...options, // Merge additional custom options
+                loop: true,
+                align: 'center',
+                startIndex: 1,
+                slidesToScroll: 1,
+                skipSnaps: false,
+                containScroll: 'trimSnaps',
+                ...options,
             });
             setEmblaApi(embla);
 
@@ -109,13 +119,31 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
             });
             embla.on("scroll", () => tweenOpacity(embla));
             embla.on("slideFocus", () => tweenOpacity(embla));
-
+            // if (emblaApi && !nextBtnDisabled) {
+            //     onNextButtonClick();
+            // }
             setTweenFactor(embla);
             tweenOpacity(embla);
+
         }
 
         return () => emblaApi?.destroy();
-    }, [emblaApi, options, setTweenFactor, tweenOpacity]);
+    }, [emblaApi, options, loading, setTweenFactor, tweenOpacity]);
+
+    // Automatically click the "Next" button every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (emblaApi && !nextBtnDisabled) {
+                onNextButtonClick();
+            }
+        }, 2000);
+
+        return () => clearInterval(interval); // Clear interval on component unmount
+    }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
+
+    if (loading) {
+        return <LoadingSkeleton />; // Show loading spinner while data is being fetched
+    }
 
     return (
         <div className={styles.embla}>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Suspense } from 'react';
 import ContributeHero from '../../components/contribute/ContributeHero';
 import ContributeSuccessStories from '../../components/contribute/ContributeSuccessStories';
 import ContributeCarousel from '../../components/contribute/ContributeCarousel';
@@ -9,6 +10,7 @@ import ContributeSize from '../../components/contribute/ContributeSize';
 import ContributeTapImpact from '../../components/contribute/ContributeTapImpact';
 import ContributeArea from "@/components/contribute/ContributeArea";
 import ContributeContributionAmount from "@/components/contribute/ContributeContributionAmount";
+import LoadingSkeleton from "@/components/LoadingSkeleton";
 
 
 const Contribute = () => {
