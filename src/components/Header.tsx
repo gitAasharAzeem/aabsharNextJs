@@ -55,7 +55,7 @@ const Header = () => {
 
                         {/* Products Link and Dropdown */}
                         <li className={`dropdown nav-item ${
-                            pathname === "/products" || pathname === "/products/waternozzle" || pathname === "/products/smartmonitor"? "active" : ""
+                            pathname === "/products" || pathname === "/products/waternozzle" || pathname === "/products/smartmonitor" || pathname === "/products/aimonitoringsystem" ? "active" : ""
                         }`}>
                             <div className="d-flex align-items-center">
                                 {/* Main Products Link */}
@@ -86,6 +86,11 @@ const Header = () => {
                                 <li>
                                     <Link className="dropdown-item" href="/products/smartmonitor">
                                         Smart Monitor
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" href="/products/aimonitoringsystem">
+                                        AI Monitoring System
                                     </Link>
                                 </li>
                                 {/*<li>*/}

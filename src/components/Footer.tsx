@@ -75,10 +75,10 @@ const Footer = () => {
                         <div className="col-md-3 mb-4">
                             <h5 className={styles.footerSectionText}>Contact Us</h5>
                             <ul className={styles.footerContact}>
-                                <li>
+                                <li className="text-black">
                                     <i className="fas fa-phone mb-2 text-black"></i> 0323 4409902
                                 </li>
-                                <li>
+                                <li className="text-black">
                                     <i className="fas fa-envelope text-black"></i> info@aabshar.net
                                 </li>
                             </ul>

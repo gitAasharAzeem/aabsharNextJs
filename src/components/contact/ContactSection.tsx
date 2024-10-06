@@ -76,20 +76,27 @@ const ContactSection: React.FC = () => {
                         <div className={styles.contactInfoCard}>
                             <i className={`${styles.icon} bi bi-telephone`}></i>
                             <h4>Contact Detail</h4>
-                            <p>+1 707-583-6405</p>
-                            <p>+1 705-323-9264</p>
+                            <ul>
+                                <li>+92 336 9991 100</li>
+                                <li><p>+25 470 7539 799</p></li>
+                                <li><p>+52 998 2436 708</p></li>
+                                <li><p>+52 998 3613 875</p></li>
+                            </ul>
                         </div>
 
                         <div className={styles.contactInfoCard}>
                             <i className={`${styles.icon} bi bi-geo-alt`}></i>
                             <h4>Office Location</h4>
-                            <p>403, Port Washington Road, Canada.</p>
+                            <p>DHA Phase 6, Karachi, Pakistan.</p>
+                            <p>A-4, Borderpoint Apartments, Off Lower Kabete
+                                Road, Westlands Road, Nairobi, Kenya</p>
+                            <p>Mr. Ali Salim AV Tikal MZ 1 LT 1, Habitalia Paraiso, Supermanzana 40, Quintana Roo, Cancun, Mexico 77507</p>
                         </div>
 
                         <div className={styles.contactInfoCard}>
                             <i className={`${styles.icon} bi bi-envelope`}></i>
                             <h4>Email Address</h4>
-                            <p>info@aabshar.com</p>
+                            <p>info@aabshar.net</p>
                             <p>Aabshar@gmail.com</p>
                         </div>
                     </div>

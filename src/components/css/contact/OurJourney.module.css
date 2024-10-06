@@ -1,8 +1,11 @@
-.journeySection {
-    padding: 40px;
-}
 
+
+.journeySection {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .journeyImage {
+    width: 100%;
     max-width: 37.8125rem;
     max-height: 26.5625rem;
     flex-shrink: 0;

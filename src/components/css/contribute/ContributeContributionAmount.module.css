@@ -71,6 +71,7 @@
 }
 
 .mosqueImage {
+    width: 100%;
     height: 16.125rem;
     background-size: cover;
     background-position: center;

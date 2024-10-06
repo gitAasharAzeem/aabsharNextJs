@@ -1,3 +1,4 @@
+"use client"
 import styles from './css/BlogsSection.module.css';
 
 export default function BlogsSection() {
@@ -13,7 +14,10 @@ export default function BlogsSection() {
 
                 <div className="row">
                     <div className="col-md-4">
-                        <div className={styles.blogCard}>
+                        <div className={styles.blogCard}
+                             onClick={() => window.open('https://medium.com/@aabsharsolutions', '_blank')}
+                             style={{ cursor: 'pointer' }}
+                        >
                             <img src="/images/techstars.png" alt="Blog 1" className={styles.blogImage} />
                             <div className={styles.blogContent}>
                                 <span className={styles.blogCategory}>High-growth Companies</span>
@@ -29,7 +33,11 @@ export default function BlogsSection() {
                     </div>
 
                     <div className="col-md-4">
-                        <div className={styles.blogCard}>
+                        <div
+                            className={styles.blogCard}
+                            onClick={() => window.open('https://medium.com/@aabsharsolutions', '_blank')}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <img src="/images/savepak.png" alt="Blog 2" className={styles.blogImage} />
                             <div className={styles.blogContent}>
                                 <span className={styles.blogCategory}>Save Pakistan</span>
@@ -42,10 +50,14 @@ export default function BlogsSection() {
                                 {/*</div>*/}
                             </div>
                         </div>
+
                     </div>
 
                     <div className="col-md-4">
-                        <div className={styles.blogCard}>
+                        <div className={styles.blogCard}
+                             onClick={() => window.open('https://medium.com/@aabsharsolutions', '_blank')}
+                             style={{ cursor: 'pointer' }}
+                        >
                             <img src="/images/awards.png" alt="Blog 3" className={styles.blogImage} />
                             <div className={styles.blogContent}>
                                 <span className={styles.blogCategory}>Award Winning Tech </span>

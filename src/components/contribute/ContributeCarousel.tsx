@@ -135,7 +135,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
             if (emblaApi && !nextBtnDisabled) {
                 onNextButtonClick();
             }
-        }, 2200);
+        }, 2700);
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
