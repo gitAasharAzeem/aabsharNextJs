@@ -17,11 +17,11 @@ const SmartMonitorPage = () => {
 
     return (
         <>
-            <SmartMonitorSection />
-            <WaterSustainabilitySection />
-            <WaterReductionSection />
-            <SubscriptionSection />
-            <ProductReviewsSection reviews={ reviews } />
+            {/*<SmartMonitorSection />*/}
+            {/*<WaterSustainabilitySection />*/}
+            {/*<WaterReductionSection />*/}
+            {/*<SubscriptionSection />*/}
+            {/*<ProductReviewsSection reviews={ reviews } />*/}
             <ProductMoreProductsSection />
         </>
     );
