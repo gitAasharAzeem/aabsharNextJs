@@ -56,6 +56,7 @@
 
 .mosqueImage {
     height: 16.125rem;
+    width: 100%;
     background-size: cover;
     background-position: center;
     border-radius: 20px;

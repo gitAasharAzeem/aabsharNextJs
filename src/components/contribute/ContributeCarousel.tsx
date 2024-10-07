@@ -7,8 +7,6 @@ import { DotButton, useDotButton } from "./ContributeCarouselDots";
 import axios from "axios";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 
-
-
 const TWEEN_FACTOR_BASE = 0.84;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
@@ -23,7 +21,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
     const [emblaApi, setEmblaApi] = useState<ReturnType<typeof EmblaCarousel> | undefined>(undefined);
     const tweenFactor = useRef(0);
 
-    const [slides, setSlides] = useState<string[]>([]); // State to hold the slides (image URLs)
+    const [slides, setSlides] = useState<any[]>([]); // Store complete mosque objects
     const [loading, setLoading] = useState(true); // Manage loading state
 
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
@@ -78,16 +76,14 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
         []
     );
 
-    // Fetch mosque data and populate slides
+    // Fetch mosque data and populate slides with complete mosque objects
     useEffect(() => {
         const fetchMosques = async () => {
             try {
                 const response = await axios.get("https://www.admin.aabshar.net/api/v1/public/mosque/top");
                 const mosqueData = response.data.data;
 
-                // Map mosque images into the slides array
-                const mosqueSlides = mosqueData.map((mosque: any) => mosque?.image?.featuredImage?.path);
-                setSlides(mosqueSlides);
+                setSlides(mosqueData); // Store entire mosque objects in slides array
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching mosque data:", error);
@@ -118,12 +114,8 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
             });
             embla.on("scroll", () => tweenOpacity(embla));
             embla.on("slideFocus", () => tweenOpacity(embla));
-            // if (emblaApi && !nextBtnDisabled) {
-            //     onNextButtonClick();
-            // }
             setTweenFactor(embla);
             tweenOpacity(embla);
-
         }
 
         return () => emblaApi?.destroy();
@@ -135,7 +127,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
             if (emblaApi && !nextBtnDisabled) {
                 onNextButtonClick();
             }
-        }, 2700);
+        }, 3000);
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
@@ -148,15 +140,24 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
         <div className={styles.embla}>
             <div className={styles.emblaViewport} ref={emblaRef}>
                 <div className={styles.emblaContainer}>
-                    {slides.map((src, index) => (
-                        <div className={styles.emblaSlide} key={index}>
-                            <img className={styles.emblaSlideImg} src={src} alt={`Slide ${index}`} />
+                    {slides.map((mosque, index) => (
+                        <div className={styles.emblaSlide} key={index}
+                             onClick={() => window.open(`https://app.aabshar.net/mosques/${mosque.id}`, '_blank')}
+                             style={{ cursor: 'pointer' }}
+                        >
+                            <img className={styles.emblaSlideImg} src={mosque?.image?.featuredImage?.path} alt={`Slide ${index}`} />
+                            <div className={styles.overlay}></div>
+                            <div className={styles.mosqueNameOverlay}>
+                                <p>Save: 100,000 liters water I 70% electricity bill</p>
+                                <p><b>{mosque.name}, {mosque.city}</b></p>
+                                <p><b>Case study →</b></p>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/*/!* Navigation Controls *!/*/}
+            {/* Optionally add navigation controls */}
             {/*<div>*/}
             {/*    <div className={styles.emblaControls}>*/}
             {/*        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />*/}

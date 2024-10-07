@@ -61,7 +61,7 @@ const ContributeMosques: React.FC = () => {
             if (emblaApi && !nextBtnDisabled) {
                 onNextButtonClick();
             }
-        }, 2000); // Change slide every 2 seconds
+        }, 2500); // Change slide every 2 seconds
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [emblaApi, nextBtnDisabled, onNextButtonClick]);
@@ -84,7 +84,11 @@ const ContributeMosques: React.FC = () => {
                     <div className={styles.emblaViewport} ref={emblaRef}>
                         <div className={styles.emblaContainer}>
                             {mosques.map((mosque, index) => (
-                                <div className={styles.emblaSlide} key={index}>
+                                <div className={styles.emblaSlide} key={index}
+                                     onClick={() => window.open(`https://app.aabshar.net/mosques/${mosque.id}`, '_blank')}
+                                     style={{ cursor: 'pointer' }}
+
+                                >
                                     {mosque?.image?.featuredImage?.path ? (
                                         <img
                                             src={mosque.image.featuredImage.path}

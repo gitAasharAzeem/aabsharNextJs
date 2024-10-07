@@ -23,6 +23,18 @@
     transition: transform 0.1s ease, opacity 0.1s ease; /* Smooth transition for scale and opacity */
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 1.5%;
+    display: block;
+    height: var(--slide-height);
+    width: 98.5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 1.8rem;
+}
+
 .emblaSlideImg {
     border-radius: 1.8rem;
     display: block;
@@ -32,6 +44,16 @@
     transition: transform 0.2s ease; /* Smooth transition for the image scaling */
 }
 
+.mosqueNameOverlay {
+    position: absolute;
+    bottom: 1%;
+    left: 7%;
+    right: 0;
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 5px;
+    line-height: 3rem;
+}
 
 /* Dot buttons styling */
 .emblaDots {
@@ -167,16 +189,35 @@
     .emblaSlide {
         width: 335px!important;
     }
+
+    .overlay {
+        left: 4.5%;
+        width: 95.5%;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 376px){
     .emblaSlide {
         width: 390px!important;
     }
+    .overlay {
+        left: 4.5%;
+        width: 95.5%;
+    }
 }
 @media (min-width: 377px) and (max-width: 426px){
     .emblaSlide {
         width: 440px!important;
+    }
+    .overlay {
+        left: 4.5%;
+        width: 95.5%;
+    }
+}
+@media (min-width: 427px) and (max-width: 768px){
+    .overlay {
+        left: 2.5%;
+        width: 97.5%;
     }
 }
 @media (min-width: 965px) and (max-width: 1024px){

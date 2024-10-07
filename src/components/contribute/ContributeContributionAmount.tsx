@@ -12,6 +12,15 @@ interface Mosque {
     name: string;
     area: string;
     city: string;
+    waterBill: string;
+    electricityBill: string;
+    noOfPeople: string;
+    products : [
+        {
+            isOptimizer: boolean;
+            quantity: string;
+        }
+    ];
     totalContribution: number;
     image: { featuredImage: { path: string } };
 }
@@ -51,7 +60,7 @@ const ContributeMosqueList: React.FC = () => {
                     emblaApi.scrollTo(0); // Restart from the beginning
                 }
             }
-        }, 2000); // Change slide every 2 seconds
+        }, 2500); // Change slide every 2 seconds
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [emblaApi, onNextButtonClick]);
@@ -72,7 +81,10 @@ const ContributeMosqueList: React.FC = () => {
                     <div className={styles.emblaViewport} ref={emblaRef}>
                         <div className={styles.emblaContainer}>
                             {mosques.map((mosque, index) => (
-                                <div key={mosque.id} className={styles.emblaSlide}>
+                                <div key={mosque.id} className={styles.emblaSlide}
+                                     onClick={() => window.open(`https://app.aabshar.net/mosques/${mosque.id}`, '_blank')}
+                                     style={{ cursor: 'pointer' }}
+                                >
                                     {mosque?.image?.featuredImage?.path ? (
                                         <img
                                             src={mosque.image.featuredImage.path}
@@ -88,13 +100,32 @@ const ContributeMosqueList: React.FC = () => {
                                     )}
                                     <div className={styles.slideText}>
                                         <div className={styles.mosqueDetails}>
-                                            <p className={styles.mosqueDetailsText}>Taps: 5 | Optimizer: 3</p>
-                                            <p className={styles.mosqueDetailsText}>Monthly Water Bill: $200</p>
-                                            <p className={styles.mosqueDetailsText}>Monthly Electricity Bill: $150</p>
-                                            <p className={styles.mosqueDetailsText}>CO2 Footprint: 500 kg</p>
-                                            <p className={styles.mosqueDetailsText}>Mosque Capacity: 100 people</p>
+
+                                            <p className={styles.mosqueDetailsText}>
+                                                Taps: {mosque.products.find(p => !p.isOptimizer)?.quantity || 'N/A'} |
+                                                Optimizer: {mosque.products.find(p => p.isOptimizer)?.quantity || 'N/A'}
+                                            </p>
+
+                                            {mosque.waterBill !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Monthly Water Bill: ${mosque.waterBill}
+                                                </p>
+                                            )}
+
+                                            {mosque.electricityBill !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Monthly Electricity Bill: ${mosque.electricityBill}
+                                                </p>
+                                            )}
+
+                                            {mosque.noOfPeople !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Mosque Capacity: {mosque.noOfPeople} people
+                                                </p>
+                                            )}
                                         </div>
                                     </div>
+
                                     <a href="#" className="btn-contribute active my-3">
                                         Contribute
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none">

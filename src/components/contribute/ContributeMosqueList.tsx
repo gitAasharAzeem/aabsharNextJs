@@ -8,6 +8,15 @@ interface Mosque {
     name: string;
     area: string;
     city: string;
+    waterBill: string;
+    electricityBill: string;
+    noOfPeople: string;
+    products : [
+        {
+            isOptimizer: boolean;
+            quantity: string;
+        }
+    ];
     totalContribution: number;
     image: { featuredImage: { path: string } };
 }
@@ -108,17 +117,40 @@ const ContributeMosqueList: React.FC<ContributeMosqueListProps> = ({ groupBy }) 
                         </p>
                         <div className={styles.contributeMosquesGrid}>
                             {displayedMosques[group].map(mosque => (
-                                <div key={mosque.id} className={styles.contributeMosqueCard}>
+                                <div key={mosque.id} className={styles.contributeMosqueCard}
+                                     onClick={() => window.open(`https://app.aabshar.net/mosques/${mosque.id}`, '_blank')}
+                                     style={{ cursor: 'pointer' }}
+                                >
                                     <div className={styles.imageContainer}>
                                         <img src={mosque.image.featuredImage.path} alt={mosque.name} className={styles.mosqueImage} />
                                         <div className={styles.mosqueNameOverlay}>{mosque.name}</div>
                                     </div>
                                     <div className={styles.mosqueDetails}>
-                                        <p className={styles.mosqueDetailsText}>Taps: 5 | Optimizer: 3</p>
-                                        <p className={styles.mosqueDetailsText}>Monthly Water Bill: $200</p>
-                                        <p className={styles.mosqueDetailsText}>Monthly Electricity Bill: $150</p>
-                                        <p className={styles.mosqueDetailsText}>CO2 Footprint: 500 kg</p>
-                                        <p className={styles.mosqueDetailsText}>Mosque Capacity: 100 people</p>
+                                        <div className={styles.mosqueDetails}>
+
+                                            <p className={styles.mosqueDetailsText}>
+                                                Taps: {mosque.products.find(p => !p.isOptimizer)?.quantity || 'N/A'} |
+                                                Optimizer: {mosque.products.find(p => p.isOptimizer)?.quantity || 'N/A'}
+                                            </p>
+
+                                            {mosque.waterBill !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Monthly Water Bill: ${mosque.waterBill}
+                                                </p>
+                                            )}
+
+                                            {mosque.electricityBill !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Monthly Electricity Bill: ${mosque.electricityBill}
+                                                </p>
+                                            )}
+
+                                            {mosque.noOfPeople !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Mosque Capacity: {mosque.noOfPeople} people
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
                                     <a href="#" className="btn-contribute active my-3">
                                         Contribute
