@@ -146,7 +146,7 @@ const ContributeCarousel: React.FC<CarouselProps> = ({ options }) => {
                              style={{ cursor: 'pointer' }}
                         >
                             <img className={styles.emblaSlideImg} src={mosque?.image?.featuredImage?.path} alt={`Slide ${index}`} />
-                            <div className={styles.overlay}></div>
+
                             <div className={styles.mosqueNameOverlay}>
                                 <p>Save: 100,000 liters water I 70% electricity bill</p>
                                 <p><b>{mosque.name}, {mosque.city}</b></p>

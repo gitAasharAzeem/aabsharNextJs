@@ -15,6 +15,7 @@ interface Mosque {
     waterBill: string;
     electricityBill: string;
     noOfPeople: string;
+    monthlyContribution: string;
     products : [
         {
             isOptimizer: boolean;
@@ -121,6 +122,12 @@ const ContributeMosqueList: React.FC = () => {
                                             {mosque.noOfPeople !== null && (
                                                 <p className={styles.mosqueDetailsText}>
                                                     Mosque Capacity: {mosque.noOfPeople} people
+                                                </p>
+                                            )}
+
+                                            {mosque.monthlyContribution !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Monthly Contribution: Pkr {mosque.monthlyContribution}
                                                 </p>
                                             )}
                                         </div>

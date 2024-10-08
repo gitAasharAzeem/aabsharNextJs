@@ -9,7 +9,17 @@ interface Mosque {
     name: string;
     area: string;
     city: string;
-    totalContribution: number;
+    totalContribution: string;
+    waterBill: string;
+    electricityBill: string;
+    noOfPeople: string;
+    monthlyContribution: string;
+    products : [
+        {
+            isOptimizer: boolean;
+            quantity: string;
+        }
+    ];
     image?: { featuredImage?: { path?: string } }; // Image might be missing
 }
 
@@ -79,11 +89,34 @@ const SearchResults = () => {
                                         <div className={styles.mosqueNameOverlay}>{mosque.name}</div>
                                     </div>
                                     <div className={styles.mosqueDetails}>
-                                        <p className={styles.mosqueDetailsText}>Taps: 5 | Optimizer: 3</p>
-                                        <p className={styles.mosqueDetailsText}>Monthly Water Bill: $200</p>
-                                        <p className={styles.mosqueDetailsText}>Monthly Electricity Bill: $150</p>
-                                        <p className={styles.mosqueDetailsText}>CO2 Footprint: 500 kg</p>
-                                        <p className={styles.mosqueDetailsText}>Mosque Capacity: 100 people</p>
+                                        <p className={styles.mosqueDetailsText}>
+                                            Taps: {mosque.products.find(p => !p.isOptimizer)?.quantity || 'N/A'} |
+                                            Optimizer: {mosque.products.find(p => p.isOptimizer)?.quantity || 'N/A'}
+                                        </p>
+
+                                        {mosque.waterBill !== null && (
+                                            <p className={styles.mosqueDetailsText}>
+                                                Monthly Water Bill: Pkr {mosque.waterBill}
+                                            </p>
+                                        )}
+
+                                        {mosque.electricityBill !== null && (
+                                            <p className={styles.mosqueDetailsText}>
+                                                Monthly Electricity Bill: Pkr {mosque.electricityBill}
+                                            </p>
+                                        )}
+
+                                        {mosque.noOfPeople !== null && (
+                                            <p className={styles.mosqueDetailsText}>
+                                                Mosque Capacity: {mosque.noOfPeople} people
+                                            </p>
+                                        )}
+
+                                        {mosque.monthlyContribution !== null && (
+                                            <p className={styles.mosqueDetailsText}>
+                                                Monthly Contribution: Pkr {mosque.monthlyContribution}
+                                            </p>
+                                        )}
                                     </div>
                                     <a href="#" className="btn-contribute active my-3">
                                         Contribute

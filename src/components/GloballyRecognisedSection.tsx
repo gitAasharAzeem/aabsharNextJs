@@ -13,7 +13,7 @@ export default function GloballyRecognisedSection() {
                             <img src="/images/ggf_logo.png" alt="Fast Company" className={`mx-auto mb-3 ${styles.globallyRecognisedImg}`} />
                         </div>
                         <div className={styles.details}>
-                            <h3 className={styles.locationTitle}>Fast Company</h3>
+                            <h3 className={styles.locationTitle}>The Global Good Fund</h3>
                         </div>
                         {/*<img src="/images/uae-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />*/}
                     </div>
@@ -22,7 +22,7 @@ export default function GloballyRecognisedSection() {
                             <img src="/images/mckinsey_logo.jpeg" alt="CB Insights" className={`mx-auto mb-3 ${styles.globallyRecognisedImg}`} />
                         </div>
                         <div className={styles.details}>
-                            <h3 className={styles.locationTitle}>CB Insights</h3>
+                            <h3 className={styles.locationTitle}>Mckinsey & Company</h3>
                         </div>
                         {/*<img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />*/}
                     </div>
@@ -32,7 +32,7 @@ export default function GloballyRecognisedSection() {
                             <img src="/images/tpl_logo.png" alt="Inc 5000" className={`mx-auto mb-3 ${styles.globallyRecognisedImg}`} />
                         </div>
                         <div className={styles.details}>
-                            <h3 className={styles.locationTitle}>Inc 5000</h3>
+                            <h3 className={styles.locationTitle}>TPL</h3>
                         </div>
                         {/*<img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />*/}
                     </div>
@@ -42,7 +42,7 @@ export default function GloballyRecognisedSection() {
                             <img src="/images/nova_logo.png" alt="Construction News" className={`mx-auto ${styles.globallyRecognisedImg}`} />
                         </div>
                         <div className={styles.details}>
-                            <h3 className={styles.locationTitle}>Construction News</h3>
+                            <h3 className={styles.locationTitle}>Novartis</h3>
                         </div>
                         {/*<img src="/images/us-flag.png" alt="US Flag" className={`mx-auto ${styles.flagImage}`} />*/}
                     </div>

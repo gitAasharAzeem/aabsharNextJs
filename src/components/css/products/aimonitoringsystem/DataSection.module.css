@@ -1,0 +1,33 @@
+.dataSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}

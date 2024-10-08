@@ -16,6 +16,7 @@
 }
 
 .emblaSlide {
+    border-radius: 1.8rem;
     transform: translate3d(0, 0, 0) scale(0.50);
     flex: 0 0 var(--slide-size);
     min-width: 0;
@@ -23,17 +24,6 @@
     transition: transform 0.1s ease, opacity 0.1s ease; /* Smooth transition for scale and opacity */
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 1.5%;
-    display: block;
-    height: var(--slide-height);
-    width: 98.5%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    border-radius: 1.8rem;
-}
 
 .emblaSlideImg {
     border-radius: 1.8rem;
@@ -189,37 +179,19 @@
     .emblaSlide {
         width: 335px!important;
     }
-
-    .overlay {
-        left: 4.5%;
-        width: 95.5%;
-    }
 }
 
 @media (min-width: 321px) and (max-width: 376px){
     .emblaSlide {
         width: 390px!important;
     }
-    .overlay {
-        left: 4.5%;
-        width: 95.5%;
-    }
 }
 @media (min-width: 377px) and (max-width: 426px){
     .emblaSlide {
         width: 440px!important;
     }
-    .overlay {
-        left: 4.5%;
-        width: 95.5%;
-    }
 }
-@media (min-width: 427px) and (max-width: 768px){
-    .overlay {
-        left: 2.5%;
-        width: 97.5%;
-    }
-}
+
 @media (min-width: 965px) and (max-width: 1024px){
     .carouselButtonNext {
         right: 1.5rem;

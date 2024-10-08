@@ -11,6 +11,7 @@ interface Mosque {
     waterBill: string;
     electricityBill: string;
     noOfPeople: string;
+    monthlyContribution: string;
     products : [
         {
             isOptimizer: boolean;
@@ -38,7 +39,7 @@ const ContributeMosqueList: React.FC<ContributeMosqueListProps> = ({ groupBy }) 
     useEffect(() => {
         const fetchMosques = async () => {
             try {
-                const response = await axios.get("https://www.admin.aabshar.net/api/v1/public/mosque/top");
+                const response = await axios.get("https://www.admin.aabshar.net/api/v1/public/mosque/all");
                 const mosqueData: Mosque[] = response.data.data;
 
                 // Group mosques based on the provided grouping type
@@ -122,7 +123,22 @@ const ContributeMosqueList: React.FC<ContributeMosqueListProps> = ({ groupBy }) 
                                      style={{ cursor: 'pointer' }}
                                 >
                                     <div className={styles.imageContainer}>
-                                        <img src={mosque.image.featuredImage.path} alt={mosque.name} className={styles.mosqueImage} />
+                                        {/*<img src={mosque.image.featuredImage.path} alt={mosque.name} className={styles.mosqueImage} />*/}
+                                        {mosque.image?.featuredImage?.path ? (
+                                            <img
+                                                src={mosque.image.featuredImage.path}
+                                                alt={mosque.name}
+                                                className={styles.mosqueImage}
+                                            />
+                                        ) : (
+                                            <img
+                                                src="/images/no-image.jpg"
+                                                alt={mosque.name}
+                                                className={styles.mosqueImage}
+                                            />
+                                        )}
+
+
                                         <div className={styles.mosqueNameOverlay}>{mosque.name}</div>
                                     </div>
                                     <div className={styles.mosqueDetails}>
@@ -148,6 +164,12 @@ const ContributeMosqueList: React.FC<ContributeMosqueListProps> = ({ groupBy }) 
                                             {mosque.noOfPeople !== null && (
                                                 <p className={styles.mosqueDetailsText}>
                                                     Mosque Capacity: {mosque.noOfPeople} people
+                                                </p>
+                                            )}
+
+                                            {mosque.monthlyContribution !== null && (
+                                                <p className={styles.mosqueDetailsText}>
+                                                    Contribution: {mosque.monthlyContribution} Pkr
                                                 </p>
                                             )}
                                         </div>
