@@ -24,7 +24,9 @@ const ProductMoreProductsSection = () => {
                         <div key={index} className="col-md-4">
                             <div className={styles.productCard}>
                                 <div className={styles.productCardImgTitle}>
-                                    <img src={`/images/${product.image}`} alt={product.title} className={styles.productImage}/>
+                                    <div className={styles.productCardImgOverlay}>
+                                        <img src={`/images/${product.image}`} alt={product.title} className={styles.productImage}/>
+                                    </div>
                                     <h3 className={styles.productTitle}>{product.title}</h3>
                                     <p className={styles.productDescription}>{product.description}</p>
                                 </div>

@@ -23,9 +23,42 @@
 .productImage {
     padding: 15px;
     width: 100%;
+    height: auto;
     border-radius: 15px;
-    max-height: 380px;
+    max-height: 330px;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .productImage {
+        padding: 10px;
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .productImage {
+        padding: 8px;
+        max-height: 280px; /* Adjust height for tablet devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .productImage {
+        padding: 5px;
+        max-height: 250px; /* Further reduce height for mobile devices */
+        width: 100%; /* Ensure the image takes full width of its container */
+    }
+}
+
+@media (max-width: 480px) {
+    .productImage {
+        padding: 3px;
+        max-height: 220px; /* Make the image more compact for very small screens */
+    }
+}
+
 
 .productTitle {
     color: #3328BF;
