@@ -10,7 +10,7 @@ const SmartMonitorPage = () => {
     return (
         <>
             <DataSection />
-            {/*<AISection />*/}
+            <AISection />
             <SuccessStoriesTitle title="RELAVANT PRODUCTS"/>
             <ProductMoreProductsSection />
         </>

@@ -12,12 +12,36 @@
     background-color: #F9F9F9;
     border-left: 1px solid #3328BF;
 }
+
+.content {
+    padding: 10px;
+}
+
 .gridCard {
     background-color: white;
     border: 1px solid #3328BF;
-    border-radius: 5%;
+    border-radius: 10%;
     height: 296px;
 }
+.cardTitle {
+    font-weight: 600;
+    font-size: 36px
+}
+.cardText {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 1rem;
+    line-height: 30px;
+}
+
+.cardLink {
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 2rem;
+    line-height: 40px;
+
+}
+
 .cardImg {
     height: auto;
     width: 100%;
@@ -68,7 +92,6 @@
 }
 
 /* Responsive Styles */
-
 @media (max-width: 1024px) {
     .aiSection {
         padding: 40px;
@@ -144,11 +167,7 @@
     }
 }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .arrow {
     margin-left: 8px;

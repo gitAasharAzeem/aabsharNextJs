@@ -8,10 +8,10 @@ interface Mosque {
     name: string;
     area: string;
     city: string;
-    waterBill: string;
-    electricityBill: string;
-    noOfPeople: string;
-    monthlyContribution: string;
+    waterBill: number;
+    electricityBill: number;
+    noOfPeople: number;
+    monthlyContribution: number;
     products : [
         {
             isOptimizer: boolean;
@@ -94,14 +94,15 @@ const ContributeMosqueList: React.FC<ContributeMosqueListProps> = ({ groupBy }) 
         } else if (groupBy === "area") {
             return `${mosque.area} > ${mosque.city}`;
         } else if (groupBy === "contribution") {
-            if (mosque.totalContribution >= 1000000) return "1M+";
-            if (mosque.totalContribution >= 500000) return "500k-1M";
-            if (mosque.totalContribution >= 200000) return "200k-500k";
+            if (mosque.monthlyContribution <= 2500) return "0 - 2500 Pkr";
+            if (mosque.monthlyContribution > 2500 && mosque.monthlyContribution <= 5000) return "2500 - 5000 Pkr";
+            if (mosque.monthlyContribution > 5000 && mosque.monthlyContribution < 10000) return "5000 - 10000 Pkr";
+            if (mosque.monthlyContribution > 1000) return "10000+ Pkr";
             return "<200k";
         } else if (groupBy === "size") {
             // Example size-based grouping
-            if (mosque.totalContribution >= 500000) return "Large";
-            if (mosque.totalContribution >= 200000) return "Medium";
+            if (mosque.noOfPeople >= 200 && mosque.noOfPeople < 400) return "Medium";
+            if (mosque.noOfPeople >= 400) return "Large";
             return "Small";
         }
         return "Other";

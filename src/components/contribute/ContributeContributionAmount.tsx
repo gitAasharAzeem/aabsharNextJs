@@ -109,13 +109,13 @@ const ContributeMosqueList: React.FC = () => {
 
                                             {mosque.waterBill !== null && (
                                                 <p className={styles.mosqueDetailsText}>
-                                                    Monthly Water Bill: ${mosque.waterBill}
+                                                    Monthly Water Bill: Pkr {mosque.waterBill}
                                                 </p>
                                             )}
 
                                             {mosque.electricityBill !== null && (
                                                 <p className={styles.mosqueDetailsText}>
-                                                    Monthly Electricity Bill: ${mosque.electricityBill}
+                                                    Monthly Electricity Bill: Pkr {mosque.electricityBill}
                                                 </p>
                                             )}
 
