@@ -16,8 +16,9 @@ const AISection: React.FC = () => {
                     </div>
 
                     <div className={styles.content}>
+                        {/* Row 1 */}
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-lg-6">
                                 <div className={`card ${styles.gridCard}`}>
                                     <div className="card-body">
                                         <h3 className={`card-title ${styles.cardTitle}`}>Problem</h3>
@@ -30,26 +31,16 @@ const AISection: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className={`card ${styles.gridCard}`}>
-                                    <div className={`card-img`}>
-                                        <img className={`${styles.cardImg}`} src="/images/aiwatersaving.png" alt="Card image cap" />
-                                    </div>
+                            <div className={`col-lg-6 ${styles.secondDiv}`}>
+                                {/* Use background image for the card */}
+                                <div className={`card ${styles.gridCard} ${styles.backgroundImageCard}`} style={{ backgroundImage: 'url(/images/aiwatersaving.png)' }}>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Row 2: Identification */}
+                        {/* Row 2 */}
                         <div className="row mt-4">
-                            <div className="col-md-6">
-                                <div className={`card ${styles.gridCard}`}>
-                                    <div className="card-body">
-                                        <p className={`card-text ${styles.cardText}`}></p>
-                                        <a href="/contact" className={`card-link ${styles.cardLink}`}></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
+                            <div className="col-lg-6">
                                 <div className={`card ${styles.gridCard}`}>
                                     <div className="card-body">
                                         <h3 className={`card-title ${styles.cardTitle}`}>Identification</h3>
@@ -57,16 +48,29 @@ const AISection: React.FC = () => {
                                             Our system swiftly identifies leaks and inefficiencies in real time, minimizing potential damage. By providing accurate data and alerts, organizations can address issues promptly, reducing costs and preserving resources while enhancing operational efficiency and sustainability.
                                         </p>
                                         <a href="/contact" className={`card-link ${styles.cardLink}`}>
-                                            Study how standard chartered get this idebtification <span className={styles.arrow}>&rarr;</span>
+                                            Study how standard chartered got this identification <span className={styles.arrow}>&rarr;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`col-lg-6 ${styles.secondDiv}`}>
+                                <div className={`card ${styles.gridCard}`}>
+                                    <div className="card-body">
+                                        <h3 className={`card-title ${styles.cardTitle}`}>Identification</h3>
+                                        <p className={`card-text ${styles.cardText}`}>
+                                            Our system swiftly identifies leaks and inefficiencies in real time, minimizing potential damage. By providing accurate data and alerts, organizations can address issues promptly, reducing costs and preserving resources while enhancing operational efficiency and sustainability.
+                                        </p>
+                                        <a href="/contact" className={`card-link ${styles.cardLink}`}>
+                                            Study how standard chartered got this identification <span className={styles.arrow}>&rarr;</span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Row 3: Decision */}
+                        {/* Row 3 */}
                         <div className="row mt-4">
-                            <div className="col-md-6">
+                            <div className="col-lg-6">
                                 <div className={`card ${styles.gridCard}`}>
                                     <div className="card-body">
                                         <h3 className={`card-title ${styles.cardTitle}`}>Decision</h3>
@@ -79,25 +83,19 @@ const AISection: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className={`card ${styles.gridCard}`}>
-                                    <div className="card-img">
-                                        <img className={`${styles.cardImg}`} src="/images/graph.png" alt="Decision Image" />
-                                    </div>
+                            <div className={`col-lg-6 ${styles.secondDiv}`}>
+                                <div className={`card ${styles.gridCard} ${styles.backgroundImageCard}`} style={{ backgroundImage: 'url(/images/graph.png)' }}>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Row 4: Outcome */}
+                        {/* Row 4 */}
                         <div className="row mt-4">
-                            <div className="col-md-6">
-                                <div className={`card ${styles.gridCard}`}>
-                                    <div className="card-img">
-                                        <img className={`${styles.cardImg}`} src="/images/outcome.png" alt="Outcome Image" />
-                                    </div>
+                            <div className="col-lg-6">
+                                <div className={`card ${styles.gridCard} ${styles.backgroundImageCard}`} style={{ backgroundImage: 'url(/images/outcome.png)' }}>
                                 </div>
                             </div>
-                            <div className="col-md-6">
+                            <div className={`col-lg-6 ${styles.secondDiv}`}>
                                 <div className={`card ${styles.gridCard}`}>
                                     <div className="card-body">
                                         <h3 className={`card-title ${styles.cardTitle}`}>Outcome</h3>
@@ -105,12 +103,26 @@ const AISection: React.FC = () => {
                                             Save up to 98% on water and 60% on electricity. Let AI manage your water risks while you earn money by reducing carbon emissions. Achieve operational efficiency and sustainability, positively impacting your bottom line and the environment.
                                         </p>
                                         <a href="/contact" className={`card-link ${styles.cardLink}`}>
-                                            Analysis the best outcome<span className={styles.arrow}>&rarr;</span>
+                                            Analyze the best outcome<span className={styles.arrow}>&rarr;</span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div className="row">
+                            <div className="col-md-6 text-center">
+                                <div className={`${styles['usp-buttons']}`}>
+                                    <a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>
+                                </div>
+                            </div>
+                            <div className="col-md-6 text-center">
+                                <div className={`${styles['usp-buttons']}`}>
+                                    <a href="https://app.aabshar.net/login" target="_blank" className={`btn ${styles['subscribe-btn']}`}>Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

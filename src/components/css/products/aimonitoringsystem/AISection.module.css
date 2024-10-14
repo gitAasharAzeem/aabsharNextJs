@@ -15,23 +15,51 @@
 
 .content {
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* This helps content adjust on smaller screens */
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .gridCard {
     background-color: white;
     border: 1px solid #3328BF;
-    border-radius: 10%;
-    height: 296px;
+    border-radius: 20px;
+    width: 100%; /* Cards should take up full width */
+    height: 100%; /* Cards should take up full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+/* Background image card */
+.backgroundImageCard {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    height: 100%;
+}
+
+.cardBody {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .cardTitle {
     font-weight: 600;
-    font-size: 36px
+    font-size: 36px;
 }
+
 .cardText {
     font-weight: 500;
     font-size: 16px;
     margin-top: 1rem;
     line-height: 30px;
+    flex-grow: 1;
 }
 
 .cardLink {
@@ -39,13 +67,6 @@
     font-size: 16px;
     margin-top: 2rem;
     line-height: 40px;
-
-}
-
-.cardImg {
-    height: auto;
-    width: 100%;
-    object-fit: cover;
 }
 
 .outerContainer {
@@ -91,6 +112,15 @@
     color: #000;
 }
 
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contactLink:hover .arrow {
+    transform: translateX(5px);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .aiSection {
@@ -108,6 +138,9 @@
 }
 
 @media (max-width: 768px) {
+    .secondDiv{
+     margin-top: 1.5rem;
+    }
     .aiSection {
         padding: 30px;
     }
@@ -124,6 +157,9 @@
     }
     .outerContainer {
         padding: 0 1.5rem;
+    }
+    .content {
+        flex-direction: column; /* Stack the cards vertically */
     }
 }
 
@@ -147,33 +183,54 @@
     }
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 24px;
-    }
-    .mncInfo {
-        font-size: 18px;
-    }
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .outerContainer {
-        padding: 0 0.5rem;
-    }
-
-    .aiSection {
-        padding: 15px;
-    }
+.usp-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
 }
 
-
-
-.arrow {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
+/* Subscribe Now Button */
+.subscribe-btn {
+    width: 16.875rem; /* Button width */
+    height: 3.6875rem; /* Button height */
+    border-radius: 2.90625rem; /* Rounded corners */
+    background-color: #1AD1B2; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.contactLink:hover .arrow {
-    transform: translateX(5px);
+/* Hover for Subscribe Now Button */
+.subscribe-btn:hover {
+    color: #000000;
+    border: 1px solid black;
+}
+
+/* Video Demo Button */
+.video-demo-btn {
+    width: 14.75rem; /* Button width */
+    height: 3.6875rem; /* Button height */
+    border-radius: 2.90625rem; /* Rounded corners */
+    border: 1px solid #000; /* Black border */
+    background-color: transparent; /* Transparent background */
+    color: #000; /* Black text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover for Video Demo Button */
+.video-demo-btn:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text on hover */
 }
