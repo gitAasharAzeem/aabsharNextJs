@@ -1,0 +1,111 @@
+/* Container for the whole section */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    background-color: #fff5e1;
+    gap: 20px;
+}
+
+/* Styling for the heading */
+.heading {
+    font-size: 2.5rem;
+    color: #3328BF;;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling for the description text */
+.description {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.demoButton {
+    background-color: #00d6a3;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.demoButton:hover {
+    background-color: #00b68b;
+}
+
+/* Image placeholder section */
+.imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    max-width: 900px;
+    object-fit: cover;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url('/images/smart-monitor.jpg') no-repeat center center / cover;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .demoButton {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .imagePlaceholder {
+        height: 250px;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .demoButton {
+        font-size: 0.85rem;
+        padding: 7px 14px;
+    }
+
+    .imagePlaceholder {
+        height: 200px;
+    }
+}

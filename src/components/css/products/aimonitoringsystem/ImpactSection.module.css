@@ -1,0 +1,49 @@
+/* Container for the entire section */
+.containerOverlay {
+    background-color: #2b0057;
+}
+.container {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+}
+
+/* Styling for the heading */
+.heading {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Styling for the description text */
+.description {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

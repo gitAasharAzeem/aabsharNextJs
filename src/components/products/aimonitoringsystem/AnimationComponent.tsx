@@ -69,7 +69,22 @@ const GlowGrid = () => {
                             ></div>
                         );
                     })}
+                    <div className={styles.logoCover}>
+                        <div className={styles.centerLogo1}>
+                            <img src="/images/leaking.png" alt="Logo" className={styles.logo} />
+                        </div>
+                        <div className={styles.centerLogo2}>
+                            <img src="/images/electric-pole.png" alt="Logo" className={styles.logo} />
+                        </div>
+                        <div className={styles.centerLogo3}>
+                            <img src="/images/waste-water.png" alt="Logo" className={styles.logo} />
+                        </div>
+                        <div className={styles.centerLogo4}>
+                            <img src="/images/co2.png" alt="Logo" className={styles.logo} />
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div className={styles.gridContainer}>
                 <div className={styles.grid}>
@@ -82,6 +97,9 @@ const GlowGrid = () => {
                             ></div>
                         );
                     })}
+                    <div className={styles.centerLogo}>
+                        <img src="/images/logo.png" alt="Logo" className={styles.logo} />
+                    </div>
                 </div>
             </div>
         </div>

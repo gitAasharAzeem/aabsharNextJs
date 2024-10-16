@@ -49,9 +49,15 @@
     justify-content: space-between;
 }
 
+/* Base styles for larger screens */
 .cardTitle {
     font-weight: 600;
     font-size: 36px;
+}
+
+.textIcon {
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .cardText {
@@ -68,6 +74,72 @@
     margin-top: 2rem;
     line-height: 40px;
 }
+
+/* Responsive Styling */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .cardTitle {
+        font-size: 30px; /* Adjust title font size */
+    }
+
+    .textIcon {
+        font-size: 14px; /* Adjust icon text size */
+    }
+
+    .cardText {
+        font-size: 14px; /* Adjust body text size */
+        line-height: 28px; /* Adjust line height */
+    }
+
+    .cardLink {
+        font-size: 14px; /* Adjust link font size */
+        line-height: 36px; /* Adjust line height */
+    }
+}
+
+/* For mobile devices (large phones) */
+@media (max-width: 768px) {
+    .cardTitle {
+        font-size: 26px; /* Further adjust title for mobile */
+    }
+
+    .textIcon {
+        font-size: 12px; /* Smaller icon text */
+    }
+
+    .cardText {
+        font-size: 13px; /* Smaller body text */
+        line-height: 24px; /* Adjust line height */
+    }
+
+    .cardLink {
+        font-size: 13px; /* Adjust link text size */
+        line-height: 32px; /* Adjust line height */
+    }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+    .cardTitle {
+        font-size: 22px; /* Smaller title for small screens */
+    }
+
+    .textIcon {
+        font-size: 11px; /* Even smaller icon text */
+    }
+
+    .cardText {
+        font-size: 12px; /* Smaller body text */
+        line-height: 22px; /* Adjust line height */
+    }
+
+    .cardLink {
+        font-size: 12px; /* Adjust link text size */
+        line-height: 28px; /* Adjust line height */
+    }
+}
+
 
 .outerContainer {
     max-width: 1200px;
@@ -136,6 +208,12 @@
         padding: 0 2rem;
     }
 }
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .secondDiv{
+        margin-top: 1.5rem;
+    }
+}
 
 @media (max-width: 768px) {
     .secondDiv{
@@ -157,9 +235,6 @@
     }
     .outerContainer {
         padding: 0 1.5rem;
-    }
-    .content {
-        flex-direction: column; /* Stack the cards vertically */
     }
 }
 
@@ -183,22 +258,15 @@
     }
 }
 
-.usp-buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-}
 
 /* Subscribe Now Button */
 .subscribe-btn {
-    width: 16.875rem; /* Button width */
-    height: 3.6875rem; /* Button height */
-    border-radius: 2.90625rem; /* Rounded corners */
-    background-color: #1AD1B2; /* Green background */
-    color: #fff; /* White text */
-    border: none; /* No border */
+    width: 100%; /* Button width */
+    height: 3.6875rem;
+    border-radius: 2.90625rem;
+    background-color: #1AD1B2;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem; /* Font size */
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -214,7 +282,7 @@
 
 /* Video Demo Button */
 .video-demo-btn {
-    width: 14.75rem; /* Button width */
+    width: 100%; /* Button width */
     height: 3.6875rem; /* Button height */
     border-radius: 2.90625rem; /* Rounded corners */
     border: 1px solid #000; /* Black border */
