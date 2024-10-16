@@ -133,7 +133,7 @@ const AISection: React.FC = () => {
                     </div>
                     <div className="row mt-3">
                         <div className="col-6">
-                            <a href="#" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>
+                            <a href="https://youtu.be/ZX4ianxvTH8?si=CPoK7uXcWIiPshpv" target="_blank" className={`btn ${styles['video-demo-btn']}`}>Video Demo</a>
                         </div>
                         <div className="col-6">
                             <a href="https://app.aabshar.net/login" target="_blank" className={`btn ml-5 ${styles['subscribe-btn']}`}>Subscribe Now</a>
