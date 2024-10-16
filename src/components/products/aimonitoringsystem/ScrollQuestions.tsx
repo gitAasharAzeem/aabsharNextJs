@@ -43,7 +43,7 @@ const ScrollQuestions = () => {
                     setIsQuestionSectionActive(false); // Allow scrolling after last question
                 }
                 setIsAnimating(false);
-            }, 100); // Adjust time between question changes
+            }, 400); // Adjust time between question changes
         }
 
         // Scroll up to show the previous question
@@ -57,7 +57,7 @@ const ScrollQuestions = () => {
                     setIsQuestionSectionActive(false); // Allow scrolling after reaching the first question
                 }
                 setIsAnimating(false);
-            }, 100);
+            }, 200);
         }
     }, [isAnimating, isQuestionSectionActive, currentQuestionIndex, questions.length]);
 
