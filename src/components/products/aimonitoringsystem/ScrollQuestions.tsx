@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import styles from '@/components/css/products/aimonitoringsystem/ScrollQuestions.module.css';
 
 const ScrollQuestions = () => {
@@ -11,9 +11,13 @@ const ScrollQuestions = () => {
         "What are they doing?",
         "How do I grow them?"
     ];
-    const sectionRef = useRef(null);
 
-    const handleScroll = (event: any) => {
+    // Typing the ref as HTMLDivElement | null
+    const sectionRef = useRef<HTMLDivElement | null>(null);
+
+    const handleScroll = useCallback((event: any) => {
+        if (!sectionRef.current) return; // If sectionRef is null, exit the function
+
         const sectionTop = sectionRef.current.getBoundingClientRect().top;
 
         // Detect when the section reaches the middle of the viewport
@@ -28,7 +32,7 @@ const ScrollQuestions = () => {
         // Prevent normal page scrolling if we are in the question section
         event.preventDefault();
 
-        // Scroll down to show next question
+        // Scroll down to show the next question
         if (event.deltaY > 0 && !isAnimating) {
             setIsAnimating(true);
             setTimeout(() => {
@@ -39,10 +43,10 @@ const ScrollQuestions = () => {
                     setIsQuestionSectionActive(false); // Allow scrolling after last question
                 }
                 setIsAnimating(false);
-            }, 500); // Adjust time between question changes
+            }, 1000); // Adjust time between question changes
         }
 
-        // Scroll up to show previous question
+        // Scroll up to show the previous question
         if (event.deltaY < 0 && !isAnimating) {
             setIsAnimating(true);
             setTimeout(() => {
@@ -53,9 +57,9 @@ const ScrollQuestions = () => {
                     setIsQuestionSectionActive(false); // Allow scrolling after reaching the first question
                 }
                 setIsAnimating(false);
-            }, 500);
+            }, 1000);
         }
-    };
+    }, [isAnimating, isQuestionSectionActive, currentQuestionIndex, questions.length]);
 
     useEffect(() => {
         // Add the wheel event listener with { passive: false } to allow preventDefault
@@ -63,11 +67,11 @@ const ScrollQuestions = () => {
         return () => {
             window.removeEventListener('wheel', handleScroll);
         };
-    }, [currentQuestionIndex, isAnimating, isQuestionSectionActive]);
+    }, [handleScroll]);
 
     return (
         <div className={styles.section} ref={sectionRef}>
-            <h1 className={styles.heading}>It's okay to not have all the answers</h1>
+            <h1 className={styles.heading}>It&apos;s okay to not have all the answers</h1> {/* Fix unescaped quote */}
             <div className={styles.questionBox}>
                 <p className={styles.question}>{questions[currentQuestionIndex]}</p>
             </div>
